@@ -11,7 +11,7 @@ export class OrganigramComponent implements OnInit {
       name: 'Fabricio David Prado Gabriel',
       cssClass: 'ngx-org-ceo',
       image: 'assets/node.svg',
-      title: 'Presidente de la Corrupción',
+      title: 'Presidente',
       childs: [
         {
           name: 'Eduardo Paucarpura',
