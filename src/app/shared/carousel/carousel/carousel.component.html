@@ -1,7 +1,20 @@
-<carousel
-    [images]="images"
-    [loop]="true"
+<!-- <div class="carousel-container">
+    <igx-carousel #carousel [loop]="true" [interval]="2000">
+      <igx-slide *ngFor="let slide of images;">
+        <div class="image-container">
+          <img [src]="slide.src" />
+        </div>
+      </igx-slide>
+    </igx-carousel>
+  </div> -->
+  
+
+<carousel #myCarousel
     [cellWidth]="'100%'"
+    [height]="350"
+    [images]="images"
     [dots]="true"
-    [autoplay]="true">
+    [loop]="true"
+    [autoplay]="true"
+    [autoplayInterval]="1500">
 </carousel>
