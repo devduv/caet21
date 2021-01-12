@@ -9,7 +9,7 @@ import { MatAccordion } from '@angular/material/expansion';
 export class PurposeComponent implements OnInit {
 
   panelOpenState = false;
-  @ViewChild(MatAccordion, {static:false}) accordion: MatAccordion;
+  @ViewChild(MatAccordion) accordion: MatAccordion;
   constructor(
 
   ) { }
