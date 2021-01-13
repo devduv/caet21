@@ -1,13 +1,11 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('myCarousel', {static: false}) myCarousel;
+export class CarouselComponent implements OnInit {
   
   public images: any[];
   constructor() {
@@ -15,10 +13,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-  }
-
-  ngAfterViewInit() {
-    console.log(this.myCarousel);
   }
 
   private initImages() {
