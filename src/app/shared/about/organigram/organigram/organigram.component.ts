@@ -17,27 +17,31 @@ export class OrganigramComponent implements OnInit {
           name: 'Eduardo Paucarpura',
           cssClass: 'ngx-org-ceo',
           image: 'assets/node.svg',
-          title: 'CEO, Google Cloud',
-        },
-        {
-          name: 'Susan Wojcicki',
-          cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
-          title: 'CEO, YouTube',
-          
-        },
-        {
-          name: 'Jeff Dean',
-          cssClass: 'ngx-org-head',
-          image: 'assets/node.svg',
-          title: 'Head of Artificial Intelligence',
+          title: 'Comité de Gestión',
           childs: [
             {
-              name: 'David Feinberg',
+              name: 'Susan Wojcicki',
               cssClass: 'ngx-org-ceo',
               image: 'assets/node.svg',
-              title: 'CEO, Google Health',
-              childs: []
+              title: 'Redes Sociales'              
+            },
+            {
+              name: 'Susan Wojcicki',
+              cssClass: 'ngx-org-ceo',
+              image: 'assets/node.svg',
+              title: 'Página Web'              
+            },
+            {
+              name: 'Susan Wojcicki',
+              cssClass: 'ngx-org-ceo',
+              image: 'assets/node.svg',
+              title: 'Edición'              
+            },
+            {
+              name: 'Susan Wojcicki',
+              cssClass: 'ngx-org-ceo',
+              image: 'assets/node.svg',
+              title: 'Análisis'              
             }
           ]
         }
