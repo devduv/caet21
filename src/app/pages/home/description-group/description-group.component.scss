@@ -1,0 +1,45 @@
+@import "src/styles/styles.color.scss";
+
+.section__description {
+  text-align: center;
+  background-color: $color_primary-02;
+  color: white;
+  padding: 30px;
+}
+
+@media (min-width: 992px) {
+  .section__description {
+    display: inline-flex;
+  }
+
+  .description__title {
+    width: 40%;
+  }
+  .description__body {
+    width: 60%;
+  }
+
+  .center__verticaly {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .body__text {
+    margin: 0px 50px;
+  }
+}
+
+.description__title {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.description__body {
+  position: relative;
+  margin: 10px 0px;
+  font-size: 15px;
+}
