@@ -2,11 +2,9 @@ const animate = document.getElementsByClassName('animate');
 const animateStatic = document.getElementsByClassName('animate__static');
 
 function showScroll() {
-    console.log('showScroll', animate);
     const scrollTop = document.documentElement.scrollTop;
     let i = 0;
     while (i < animate.length) {
-        console.log('showScroll', animate[i].offsetTop);
         let heightAnimate = animate[i].offsetTop;
         if (heightAnimate - 550 < scrollTop) {
             showContent(animate[i]);
