@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              "node_modules/material-design-icons/iconfont/material-icons.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/animation.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -39,7 +42,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -125,7 +127,7 @@
   "defaultProject": "caet21",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss"
     }
   }
 }
