@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuService } from 'src/app/core/services/menu.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private menuService: MenuService,
+    private router: Router) { }
 
   ngOnInit() {
   }
 
+  changeMenu(menu) {
+    this.router.navigateByUrl(menu);
+  }
 }

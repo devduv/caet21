@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { registerLocaleData } from '@angular/common';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+
 registerLocaleData(es);
 
 @NgModule({
@@ -13,7 +14,7 @@ registerLocaleData(es);
     AppComponent
   ],
   imports: [
-  AppRoutingModule,
+    AppRoutingModule,
     BrowserModule,
     NoopAnimationsModule,
     MaterialModule

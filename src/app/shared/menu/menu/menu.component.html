@@ -1,8 +1,32 @@
-<nav>
-    <ul class="nav__container">
-        <li class="nav__item" (click)="changeMenu('')">Inicio</li>
-        <li class="nav__item" (click)="changeMenu('Nosotros')">Nosotros</li>
-        <li class="nav__item" (click)="changeMenu('Actividades')">Actividades</li>
-        <li class="nav__item" (click)="changeMenu('Contáctenos')">Contáctenos</li>
-    </ul>
-</nav>
+<mat-toolbar>
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <button mat-button disabled class="design-mat-button">
+            <img class="img-fluid" src="../../../../../logo_caet.jpg">
+            <span (click)="changeMenu('')" >CAET 21</span>
+    </button>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a (click)="changeMenu('')" mat-button>Inicio</a>
+            </li>
+            <li>
+                <button  mat-button  [matMenuTriggerFor]="listNosotros">Nosotros</button>
+            </li>
+            <mat-menu #listNosotros="matMenu" class="customize">
+                <button mat-menu-item>Historia</button>
+                <button mat-menu-item>Organigrama</button>
+                <button mat-menu-item>Misión y visión</button>
+            </mat-menu>            
+            <li>
+                <a (click)="changeMenu('Actividades')" mat-button>Actividades</a>
+            </li>
+            <li>
+                <a (click)="changeMenu('Contáctenos')" mat-button>Contáctenos</a>
+            </li>
+        </ul>
+    </div>
+  </mat-toolbar>

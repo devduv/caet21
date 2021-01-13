@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SidenavListComponent } from './sidenav-list.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
@@ -9,19 +10,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 
+
 @NgModule({
-  declarations: [],
+  declarations: [SidenavListComponent],
   imports: [
-  CommonModule,
-  MatTabsModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatButtonModule,
-  MatListModule,
-  MatMenuModule
-  ],
-  exports: [
+    CommonModule,
+    MatMenuModule,
     MatExpansionModule,
     MatSidenavModule,
     MatIconModule,
@@ -33,5 +27,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatListModule,
     MatMenuModule
   ],
+  exports: [SidenavListComponent],
+
 })
-export class MaterialModule { }
+export class SidenavListModule { }

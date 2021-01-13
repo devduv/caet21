@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { MenuService } from 'src/app/core/services/menu.service';
@@ -11,6 +11,7 @@ import { MenuService } from 'src/app/core/services/menu.service';
 export class MenuComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription;
+  @Output() public sidenavToggle = new EventEmitter();
 
   constructor(
     private menuService: MenuService,
@@ -27,5 +28,10 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   changeMenu(menu) {
     this.router.navigateByUrl(menu);
+  }
+
+    
+  public onToggleSidenav = () => {
+    this.sidenavToggle.emit();
   }
 }
