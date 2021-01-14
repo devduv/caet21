@@ -7,8 +7,7 @@ import { LayoutModule } from 'src/app/layout/layout.module';
   declarations: [HistoryComponent],
   imports: [
   CommonModule,
-    LayoutModule,
-
+  LayoutModule,
   ]
 })
 export class HistoryModule { }

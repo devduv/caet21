@@ -4,7 +4,7 @@
             <mat-icon>menu</mat-icon>
         </button>
     </div>
-    <button mat-button disabled class="design-mat-button">
+    <button mat-button disabled  (click)="changeMenu('')" class="design-mat-button">
             <img class="img-fluid" src="../../../../../logo_caet.jpg">
             <span (click)="changeMenu('')" >CAET 21</span>
     </button>
@@ -17,9 +17,9 @@
                 <button  mat-button  [matMenuTriggerFor]="listNosotros">Nosotros</button>
             </li>
             <mat-menu #listNosotros="matMenu" class="customize">
-                <button mat-menu-item>Historia</button>
-                <button mat-menu-item>Organigrama</button>
-                <button mat-menu-item>Misión y visión</button>
+                <button mat-menu-item (click)="changeMenu('')">Historia</button>
+                <button mat-menu-item (click)="changeMenu('Nosotros')">Organigrama</button>
+                <button mat-menu-item (click)="changeMenu('')">Misión y visión</button>
             </mat-menu>            
             <li>
                 <a (click)="changeMenu('Actividades')" mat-button>Actividades</a>

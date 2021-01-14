@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuService } from 'src/app/core/services/menu.service';
 
 @Component({
   selector: 'app-sidenav-list',
@@ -9,7 +11,9 @@ export class SidenavListComponent implements OnInit {
   
   @Output() sidenavClose = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private menuService: MenuService,
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -17,5 +21,10 @@ export class SidenavListComponent implements OnInit {
   public onSidenavClose = () => {
     this.sidenavClose.emit();
   }
+
+  changeMenu(menu) {
+    this.router.navigateByUrl(menu);
+  }
+
 
 }
