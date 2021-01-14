@@ -5,7 +5,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { registerLocaleData } from '@angular/common';
 import { NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
+import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { FooterModule } from './shared/footer/footer.module';
+import { MenuModule } from './shared/menu/menu.module';
+import { SidenavListModule } from './shared/sidenav-list/sidenav-list.module';
+
 
 registerLocaleData(es);
 
@@ -17,8 +27,17 @@ registerLocaleData(es);
     AppRoutingModule,
     BrowserModule,
     NoopAnimationsModule,
-    MaterialModule
     BrowserAnimationsModule,
+    RouterModule,
+    MenuModule,
+    FooterModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    SidenavListModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es_ES' },
