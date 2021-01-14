@@ -4,7 +4,7 @@ import es from '@angular/common/locales/es';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { registerLocaleData } from '@angular/common';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 
 registerLocaleData(es);
@@ -18,6 +18,7 @@ registerLocaleData(es);
     BrowserModule,
     NoopAnimationsModule,
     MaterialModule
+    BrowserAnimationsModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es_ES' },
