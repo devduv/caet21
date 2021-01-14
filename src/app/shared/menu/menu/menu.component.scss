@@ -31,6 +31,13 @@ mat-toolbar{
     border-radius: 0px;
     background:black
 }
+
+.app-toolbar {
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
  
 @media(max-width: 959px){
     mat-toolbar{

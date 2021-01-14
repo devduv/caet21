@@ -23,6 +23,7 @@ export class SidenavListComponent implements OnInit {
   }
 
   changeMenu(menu) {
+    this.sidenavClose.emit();
     this.router.navigateByUrl(menu);
   }
 
