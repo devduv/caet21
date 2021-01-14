@@ -17,15 +17,15 @@
                 <a  mat-button  [matMenuTriggerFor]="listNosotros">Nosotros</a>
             </li>
             <mat-menu #listNosotros="matMenu" class="customize">
-                <button mat-menu-item (click)="changeMenu('Nosotros/Historia')">Historia</button>
-                <button mat-menu-item (click)="changeMenu('Nosotros/Organigrama')">Organigrama</button>
-                <button mat-menu-item (click)="changeMenu('Nosotros/Proposito')">Misión y visión</button>
+                <button mat-menu-item (click)="changeMenu('nosotros/historia')">Historia</button>
+                <button mat-menu-item (click)="changeMenu('nosotros/organigrama')">Organigrama</button>
+                <button mat-menu-item (click)="changeMenu('nosotros/proposito')">Misión y visión</button>
             </mat-menu>            
             <li>
-                <a (click)="changeMenu('Actividades')" mat-button>Actividades</a>
+                <a (click)="changeMenu('actividades')" mat-button>Actividades</a>
             </li>
             <li>
-                <a (click)="changeMenu('Contáctenos')" mat-button>Contáctenos</a>
+                <a (click)="changeMenu('contáctenos')" mat-button>Contáctenos</a>
             </li>
         </ul>
     </div>

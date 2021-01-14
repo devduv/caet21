@@ -1,7 +1,7 @@
 <div class="sidenav-style">
     <div class="with-bg">
         <div>
-            <img class="circle banner-image" src="../../../../../logo_caet.jpg" width="100">
+            <img class="circle banner-image" src="./favicon.ico" width="100">
        </div>
     </div>
     <div class="subtitulo">
@@ -13,34 +13,33 @@
                 Inicio
             </a>
         </mat-nav-list>
-        <mat-accordion multi="true" [displayMode]="displayMode">
+        <mat-accordion multi="true">
             <mat-expansion-panel class="no-shadow parametersPanel">
-                <mat-expansion-panel-header fxLayout="row" class="disable_ripple" [expandedHeight]="expandHeight"
-                    [collapsedHeight]="collapseHeight">
+                <mat-expansion-panel-header fxLayout="row" class="disable_ripple">
                     <mat-panel-title class="style-item">
                         Nosotros
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                     <mat-nav-list >
                         <mat-list-item>
-                            <a mat-list-item class="style-item" (click)="changeMenu('Nosotros/Historia')">Historia</a>
+                            <a mat-list-item class="style-item" (click)="changeMenu('nosotros/historia')">Historia</a>
                         </mat-list-item>
                         <mat-list-item>
-                            <a  mat-list-item class="style-item" (click)="changeMenu('Nosotros/Organigrama')">Organigrama</a>
+                            <a  mat-list-item class="style-item" (click)="changeMenu('nosotros/organigrama')">Organigrama</a>
                         </mat-list-item>
                         <mat-list-item  class="style-sub-item">
-                            <a mat-list-item  class="style-item" (click)="changeMenu('Nosotros/Proposito')" >Misión y visión</a>
+                            <a mat-list-item  class="style-item" (click)="changeMenu('nosotros/proposito')" >Misión y visión</a>
                         </mat-list-item>
                     </mat-nav-list>
             </mat-expansion-panel>
         </mat-accordion>
         <mat-nav-list>
-            <a mat-list-item class="style-item" (click)="changeMenu('Actividades')">
+            <a mat-list-item class="style-item" (click)="changeMenu('actividades')">
                 Actividades
             </a>
         </mat-nav-list>
         <mat-nav-list>
-            <a mat-list-item class="style-item" (click)="changeMenu('Contáctenos')">
+            <a mat-list-item class="style-item" (click)="changeMenu('contáctenos')">
                 Contáctenos
             </a>
         </mat-nav-list>

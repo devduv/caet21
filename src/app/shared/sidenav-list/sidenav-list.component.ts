@@ -8,7 +8,7 @@ import { MenuService } from 'src/app/core/services/menu.service';
   styleUrls: ['./sidenav-list.component.scss']
 })
 export class SidenavListComponent implements OnInit {
-  
+
   @Output() sidenavClose = new EventEmitter();
 
   constructor(
