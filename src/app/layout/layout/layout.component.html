@@ -1,13 +1,16 @@
-<div>
-    <div>
-        <app-menu></app-menu>
-    </div>
-
-    <div>
-        <router-outlet></router-outlet>
-    </div>
-
-    <div>
-        <app-footer></app-footer>
-    </div>
-</div>
+<mat-sidenav-container color="white">
+    <mat-sidenav #sidenav role="navigation">
+        <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <app-menu (sidenavToggle)="sidenav.toggle()"></app-menu>
+        <main>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+            <div>
+                <app-footer></app-footer>
+            </div>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

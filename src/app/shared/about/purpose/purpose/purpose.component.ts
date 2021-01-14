@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-purpose',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurposeComponent implements OnInit {
 
-  constructor() { }
+  panelOpenState = false;
+  @ViewChild(MatAccordion, {static:false}) accordion: MatAccordion;
+  constructor(
 
+  ) { }
+  ;
   ngOnInit() {
+  }
+
+  closeAllPanels(){
+    this.accordion.closeAll();
+  }
+  openAllPanels(){
+    this.accordion.openAll();
   }
 
 }
