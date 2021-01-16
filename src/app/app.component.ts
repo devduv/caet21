@@ -8,10 +8,14 @@ import { MenuService } from './core/services/menu.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private menuService: MenuService,
-    private router: Router) { }
+
+  public isLoading: boolean;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.isLoading = true;
+    }, 1500);
   }
 
   changeMenu(menu) {

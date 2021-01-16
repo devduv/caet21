@@ -1,14 +1,15 @@
-@import './node_modules/ngx-org-chart/theming';
-@import './styles.font.scss';
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@import "./node_modules/ngx-org-chart/theming";
+@import "./styles.font.scss";
+@import "~igniteui-angular/lib/core/styles/themes/index";
+@import "src/styles/styles.color.scss";
 
 @include igx-core();
 @include igx-theme($default-palette, $legacy-support: true);
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
 
 .container {
@@ -30,7 +31,6 @@
     width: 1170px;
   }
 }
-
 
 .animate {
   opacity: 0;
@@ -54,4 +54,17 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.box {
+  //border: 5px solid black;
+  margin: 1em;
+  padding: 1em;
+}
+
+.box-titulo-principal {
+  line-height: 2.5;
+  padding-left: 30px;
+  border-left: 10px solid $color_primary-01;
+  margin-bottom: 30px;
 }
