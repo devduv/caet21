@@ -5,12 +5,10 @@
     <mat-sidenav-content style="margin-top: 54px !important;">
         <app-menu (sidenavToggle)="sidenav.toggle()"></app-menu>
         <main>
-            <div>
+            <div class="style-router">
                 <router-outlet></router-outlet>
             </div>
-            <div>
-                <app-footer></app-footer>
-            </div>
         </main>
+        <app-footer></app-footer>
     </mat-sidenav-content>
 </mat-sidenav-container>
