@@ -1,1 +1,59 @@
-<p>activities-list works!</p>
+<div class="box">
+    <div class="box-titulo-principal">
+        <h1>Talleres</h1>
+    </div>
+
+    <div>
+        <mat-grid-list cols="3" [style.width]="'100%'" gutterSize="15px">
+            <mat-grid-tile *ngFor="let taller of talleres;">
+                <mat-card class="card">
+                    <img mat-card-image [src]="taller.source" class="img-card">
+                    <mat-card-content>
+                        <h2> {{taller.nombre}} </h2>
+
+                        <div class="taller-card-div">
+                            <img mat-card-image [src]="taller.iconoFecha" class="icon-card"> {{taller.fecha}}
+                        </div>
+                        <div class="taller-card-div">
+                            <img mat-card-image [src]="taller.iconoHora" class="icon-card"> {{taller.hora}}
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+    </div>
+
+    <div class="box-titulo-principal">
+        <h1>Conferencias</h1>
+    </div>
+
+    <div>
+        <mat-card *ngFor="let conferencia of conferencias;">
+            <mat-card-content class="conferencia-card-div">
+
+                <div>
+                    <img class="image__center image__center_left" [src]="conferencia.source" />
+                </div>
+
+                <div class="abstract__content">
+
+                    <div class="abstract__title__2">
+                        <h4>{{conferencia.nombre}}</h4>
+                    </div>
+                    <div class="abstract__body">
+                        <h5>{{conferencia.exponente}} </h5>
+                        <h5>{{conferencia.cargoExponente}}</h5>
+                    </div>
+
+                    <div class="taller-card-div-2">
+                        <img mat-card-image [src]="conferencia.iconoFecha" class="icon-card"> {{conferencia.fecha}}
+                    </div>
+                    <div class="taller-card-div-2">
+                        <img mat-card-image [src]="conferencia.iconoHora" class="icon-card"> {{conferencia.hora}}
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

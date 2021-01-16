@@ -1,0 +1,92 @@
+.box {
+    margin: 1em;
+    padding: 1em;
+}
+
+.box-titulo-principal {
+    line-height: 2.5;
+    padding-left: 30px;
+    border-left: 10px solid green;
+    margin-bottom: 30px;
+}
+
+.card {
+    max-width: 500px;
+    max-height: 300px;
+}
+
+.img-card {
+    height: 250px;
+}
+
+.icon-card {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    vertical-align: text-bottom;
+}
+
+.taller-card-div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #89807E;
+    text-align: center;
+}
+
+.taller-card-div-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
+    background: green;
+}
+
+.conferencia-card-div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #C9C4C3;
+    text-align: center;
+}
+
+mat-grid-tile {
+    background: #C9C4C3;
+}
+
+mat-card>:first-child,
+mat-card-content>:first-child {
+    margin-top: -20px;
+    text-align: center;
+}
+
+.abstract__image {
+    width: 250px;
+    position: relative;
+    margin: 0px 15px;
+}
+
+.image__center {
+    width: 250px;
+    border-radius: 8px;
+}
+
+.abstract__title {
+    width: 100%;
+    position: absolute;
+    color: white;
+    background-color: #000000bd;
+    text-align: center;
+    padding: 5px;
+    bottom: 6px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.abstract__body {
+    margin: 25px;
+}
+
+.image__center_left {
+    left: 15%;
+}
