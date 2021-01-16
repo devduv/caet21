@@ -4,6 +4,10 @@
     padding: 1em;
 }
 
+.box-1{
+    border-bottom: 5px solid red;
+}
+
 .box-titulo-principal{
     line-height: 2.5;
     padding-left: 30px;
@@ -13,7 +17,7 @@
 
 .caja-organigrama{
     width: 80%;
-    height: 1000px;
+    height: 800px;
     margin: 0 auto;
 }
 
@@ -23,7 +27,7 @@
     margin: 0 auto;
     padding-top: 100px;
     height: 550px;
-    width: 70%;
+    width: 80%;
     background-image: linear-gradient(white 70%, #f2f2f2 30%);
     box-shadow: 0px 0px 4px #c9c9c9;
 }
@@ -37,10 +41,6 @@
     display: block;
     margin: 0 auto;
     border: 1px solid red;
-}
-
-.box-1{
-    border-bottom: 5px solid red;
 }
 
 .flex-box{
@@ -98,4 +98,47 @@
 
 .span{
     font-weight: bold;
+}
+
+@media screen and (max-width: 1200px){
+    /*
+    .caja-organigrama{
+        width: 100%;
+        min-width: 1150px;
+    }
+    */
+
+    .grid-box{
+        grid-template-columns: 45% 45%;
+    }
+    .area{
+        height: 500px;
+    }
+
+    .caracteristica{
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .caja-organigrama{
+        width: 100%;
+        min-width: 750px;
+    }
+
+    .grid-box{
+        grid-template-columns: 80%;
+        grid-column-gap: 0px;
+    }
+    .area{
+        height: 500px;
+    }
+
+    .box{
+        min-width: 740px;
+    }
+
+    .caracteristica{
+        overflow: auto;
+    }
 }
