@@ -1,4 +1,5 @@
-@import "./styles.font.scss";
+@import './node_modules/ngx-org-chart/theming';
+@import './styles.font.scss';
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @import './node_modules/ngx-org-chart/theming';
 @include igx-core();
@@ -7,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins";
+    font-family: 'Poppins';
 }
 
 .container {

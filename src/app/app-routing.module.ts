@@ -13,17 +13,17 @@ const routes: Routes = [
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'Nosotros',
+    path: 'nosotros',
     loadChildren: () =>
       import('./pages/about/about.module').then((m) => m.AboutModule),
   },
   {
-    path: 'Actividades',
+    path: 'actividades',
     loadChildren: () =>
       import('./pages/activities/activities.module').then((m) => m.ActivitiesModule),
   },
   {
-    path: 'Contáctenos',
+    path: 'contáctenos',
     loadChildren: () =>
       import('./pages/contact/contact.module').then((m) => m.ContactModule),
   },
@@ -35,7 +35,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
