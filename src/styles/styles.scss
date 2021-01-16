@@ -1,5 +1,6 @@
 @import './node_modules/ngx-org-chart/theming';
 @import './styles.font.scss';
+@import "src/styles/styles.color.scss";
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @import './node_modules/ngx-org-chart/theming';
 
@@ -62,7 +63,24 @@
     align-items: initial !important;
 }
 
-.mat-card>:first-child,
-.mat-card-content>:first-child {
-    margin-top: -20px !important;
+.mat-card {
+    background: $color_primary-02 !important;
+    margin-bottom: 10px;
+}
+
+.box {
+    margin: 1em;
+    padding: 1em;
+}
+
+.box-titulo-principal {
+    line-height: 2.5;
+    padding-left: 30px;
+    border-left: 10px solid $color_primary-03;
+    margin-bottom: 30px;
+}
+
+.mat-icon.mat-icon-inline {
+    vertical-align: text-bottom;
+    font-size: 20px !important;
 }
