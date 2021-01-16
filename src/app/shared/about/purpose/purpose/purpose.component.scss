@@ -1,40 +1,45 @@
-// .mat-form-field + .mat-form-field {
-//   margin-left: 8px;
-// }
-mat-expansion-panel{
-  background-color: rgb(91, 211, 171);
-}
-.example-action-buttons {
-  padding-bottom: 20px;
+.box-titulo-principal{
+  line-height: 2.5;
+  padding-left: 30px;
+  border-left: 10px solid green;
+  margin-bottom: 30px;
 }
 
-.mat-panel-header{
-
+.box{
+  //border: 5px solid black;
+  margin: 1em;
+  padding: 1em;
 }
-mat-panel-title{
+
+.example-card{ display: flex;
+  flex-direction: column; }
+
+mat-card-header{
   background-color: rgb(152, 243, 213);
-  align-self: center;
   color: black;
 }
 
-td{
-  width: 50%;
+mat-card{
+  height: 200px;
+  background-color: rgb(91, 211, 171);
+}
+
+.card-vision{
+  background-color: rgb(179, 180, 180);
 }
 
 p{
-  text-align: center;
+  text-align: justify;
   color: black;
   font-size: large;
+  display: block;
 }
 
-h1, h2{
+.content-vision{
+  background-color:  rgb(241, 234, 234);
+}
+
+.card-title{
   text-align: center;
-}
-
-.header-card{
-  height: 50px;
-  color: darkgreen ;
-  font-size: xx-large;
-  flex: auto;
-  background-color:  rgb(255, 255, 255);
+  display: block;
 }
