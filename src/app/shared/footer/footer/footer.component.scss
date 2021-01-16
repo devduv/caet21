@@ -1,5 +1,7 @@
+@import "src/styles/styles.color.scss";
+
 footer {
-    background-color: #292c2f;
+    background-color: $color_primary-02;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -24,7 +26,7 @@ footer {
 }
 
 .footer-navigation h3 span {
-    color: #18801e
+    color: $color_primary-01;
 }
 
 .footer-navigation p.links a {
@@ -51,12 +53,12 @@ footer {
 }
 
 .footer-contacts p a {
-    color: #18801e;
-    text-decoration: none
+    color: $color_primary-01;
+    text-decoration: none;
 }
 
 .fa.footer-contacts-icon {
-    background-color: #33383b;
+    background-color: $color_primary-01;
     color: #fff;
     font-size: 18px;
     width: 38px;
