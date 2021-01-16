@@ -1,0 +1,127 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+  .subtitulo{
+    background-color: rgb(0, 153, 82);
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .subtitulo-text{
+      font-size: 20px;
+      font-weight: normal;
+  }
+  
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  mat-sidenav {
+    width: 250px;;
+  }
+  
+  .circle {
+    border-radius: 50%;
+  }
+  
+  .with-bg {
+    background-color: black;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    max-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .banner-image {
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 40% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+  
+  .no-shadow {
+    box-shadow: none !important;
+  }
+  
+  ::ng-deep .mat-expansion-panel-body {
+    padding: 0px !important;
+    background-color: rgb(179, 209, 192);
+  }
+
+  ::ng-deep .mat-expansion-indicator::after{
+    color: black;
+  }
+  
+  .header-box-shadow {
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  }
+  
+  .bottom-to-top {
+    border: 0px;
+    border-right: 1px;
+    border-style: solid;
+    border-image:
+    linear-gradient(to top, #c1c1c1, rgba(0, 0, 0, 0)) 1 100%
+  }
+
+  mat-nav-list{
+    border: 0px;
+    padding: 0px !important;
+  }
+
+  mat-expansion-panel{
+    background-color: white;
+    color: white;   
+  }
+
+  mat-expansion-panel-header{
+    background-color: white;
+    color: white; 
+    padding: 0px;
+    padding-left: 16px; 
+    padding-right: 30px; 
+  }
+
+    .disable_ripple:hover{
+    background: currentColor !important;
+        }
+
+  .style-item{
+      color: black;
+      font-size: 20px;
+  }
+
+  .style-sub-item{
+    color: black;
+    font-size: 20px;
+  }
+ 
+
+  .mat-expansion-panel-header-description, 
+  .mat-expansion-indicator::after {
+      color: black;
+  }
+
+
+  ::ng-deep .parametersPanel .mat-expansion-panel-body {
+    padding: 0px;
+}
