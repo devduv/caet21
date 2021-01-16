@@ -19,7 +19,7 @@ a:hover, a:active{
 }
 
 .img-fluid {
-    max-width: 15% !important;
+    max-width: 45px !important;
     margin-right: 5% !important;
   }
   
@@ -33,10 +33,10 @@ mat-toolbar{
 }
 
 .app-toolbar {
-    position: sticky;
-    position: -webkit-sticky; /* For macOS/iOS Safari */
+    position: fixed;
     top: 0; /* Sets the sticky toolbar to be on top */
     z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+    position: fixed;
 }
  
 @media(max-width: 959px){
