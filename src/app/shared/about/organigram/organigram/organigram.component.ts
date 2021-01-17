@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+declare var showStatic: any;
 
 @Component({
   selector: 'app-organigram',
   templateUrl: './organigram.component.html',
   styleUrls: ['./organigram.component.scss']
 })
-export class OrganigramComponent implements OnInit {
+export class OrganigramComponent implements OnInit, AfterViewInit {
   public nodes: any = [
     {
       name: 'Fabricio David Prado Gabriel',
@@ -51,6 +52,10 @@ export class OrganigramComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    showStatic();
   }
 
 }
