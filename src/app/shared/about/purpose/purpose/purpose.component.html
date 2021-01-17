@@ -1,38 +1,65 @@
-<mat-card class="header-card"><mat-icon>remove_red_eye</mat-icon><b>   Misión y Visión</b></mat-card>
+<div class="box">
+  <div class="box-titulo-principal">
+    <h1>Misión y Visión</h1>
+  </div>
 
-<table border="1px">
-  <tr>
-    <td>
-      <div class="example-action-buttons">
-        <button mat-button (click)="openAllPanels()">Expand All</button>
-        <button mat-button (click)="closeAllPanels()">Collapse All</button>
-      </div>
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title class="mat-panel-header">
-              <h2>MISIÓN</h2>
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>Somos una comunidad académica de profesores, estudiantes y personal administrativo dedicado a la investigación científica y tecnológica. Formamos profesionales en Ingeniería de Sistemas e Informática de alto nivel</p>
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-            <h2>VISIÓN</h2>
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>Somos una comunidad académica de profesores, estudiantes y personal administrativo dedicado a la investigación científica y tecnológica. Formamos profesionales en Ingeniería de Sistemas e Informática de alto nivel</p>
-        </mat-expansion-panel>
-      </mat-accordion>
-    </td>
-    <td>
-      <div>
-        <img mat-card-image src="./src/assets/images/logo/favicon.ico" width="50%" height="50%">
-      </div>
-      <h1>CAET 21</h1>
-    </td>
-  </tr>
-</table>
+  <div>
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title><p clas="card-title">MISIÓN</p></mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p style="padding-top: 5%;">
+              Somos una comunidad académica de profesores, estudiantes y personal administrativo dedicado a la investigación científica y tecnológica.
+              Formamos profesionales en Ingeniería de Sistemas e Informática de alto nivel
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="2">
+          <div>
+            <img src="../../../../../logo_caet.jpg" height="300px" width="300px">
+            <h1 style="text-align: center">
+              CAET 21
+            </h1>
+          </div>
+
+      </mat-grid-tile>
+
+
+      <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="1">
+          <mat-card class="card-vision">
+            <mat-card-header class="content-vision">
+              <mat-card-title><p clas="card-title">VISIÓN</p></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p style="padding-top: 5%;">
+                Ser comunidad académica de excelencia, culta y pioneraen la investigación científica y tecnológica.
+                Formamos profesionales de Sistemas e Informática
+              </p>
+            </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 
