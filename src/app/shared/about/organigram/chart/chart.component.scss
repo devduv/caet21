@@ -1,0 +1,43 @@
+@import "src/styles/styles.color.scss";
+
+
+.org-chart {
+    width: 100% !important;
+}
+:host ::ng-deep {
+
+    ngx-chart-designer {
+        display: inline-block;
+    }
+
+    .ngx-org-self-vertical {
+        padding: 25px;
+        background: $color_primary-03;
+        overflow-x: auto;
+    }
+
+    .ngx-org-first {
+        color: white;
+        background: $color_primary-02;
+        font-size: 16px;
+    }
+
+    .ngx-org-child {
+        color: black;
+        background: white;
+        font-size: 16px;
+    }
+
+    .ngx-org-title {
+        font-family: "Poppins" !important;
+        font-weight: bold;
+    }
+
+    .ngx-org-name {
+        font-family: "Poppins" !important;
+    }
+
+    .ngx-org-border {
+        border: 1px solid white;
+    }
+}
