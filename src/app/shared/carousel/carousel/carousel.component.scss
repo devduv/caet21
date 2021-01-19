@@ -8,7 +8,7 @@
 :host ::ng-deep{
 
     .igx-carousel__inner{
-        min-height: 250px !important;
+        min-height: 300px !important;
     }
 
     
@@ -42,7 +42,8 @@
 
     .igx-slide img{
         object-fit: fill;
-        max-width: 90%;
+        max-width: 100%;
+        object-fit: cover;
     }
 
 }
