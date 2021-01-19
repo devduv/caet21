@@ -1,214 +1,52 @@
 <div class="container">
-    <div class="box box-1">
+    <div class="box animate__static">
         <div class="box-titulo-principal">
             <h1>Organigrama</h1>
         </div>
-        <div class="caja-organigrama">
-            <ngx-org-chart [nodes]="nodes" direction="vertical" class="organigrama">
-                <p class="texto-organigrama-1">Nuestros profesionales</p>
-                <p class="texto-organigrama-2">Organigrama de la empresa</p>
-            </ngx-org-chart>
+
+
+    </div>
+    <app-chart></app-chart>
+    <div class="box">
+        <div class="box-titulo animate__static">
+            <h2 class="titulo">Presidente</h2>
+            <p> {{president.name}}</p>
+            <hr />
+        </div>
+        <div style="margin-top: 10px">
+            <div class="flex-box animate" *ngFor="let function of president.functions">
+                <div class="cuadrado"></div>
+                <div class="caracteristica">
+                    <p class="texto-caracteristica">
+                        {{function}}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="box">
-        <div class="box-titulo">
-            <h1 class="titulo">Presidente</h1>
+        <div class="animate">
+            <h2 class="titulo">Comité de gestión</h2>
+            <hr />
         </div>
-        <p>
-            El presidente es Fabricio David Prado Gabriel.
-        </p>
-        <p>
-            Funciones:
-        </p>
-        <div class="flex-box">
-            <div class="cuadrado"></div>
-            <div class="caracteristica">
-                <p class="texto-caracteristica">
-                    Dirigir al equipo para cumplir los objetivos trazados.
-                </p>
-            </div>
-        </div>
-        <div class="flex-box">
-            <div class="cuadrado"></div>
-            <div class="caracteristica">
-                <p class="texto-caracteristica">
-                    Supervisar las actividades de cada área de interés y de las áreas funcionales.
-                </p>
-            </div>
-        </div>
-        <div class="flex-box">
-            <div class="cuadrado"></div>
-            <div class="caracteristica">
-                <p class="texto-caracteristica">
-                    Convocar a reuniones internas con el comité de gestión y con cada área funcional.
-                </p>
-            </div>
-        </div>
-        <div class="flex-box">
-            <div class="cuadrado"></div>
-            <div class="caracteristica">
-                <p class="texto-caracteristica">
-                    Coordinar las ponencias, talleres o conferencias.
-                </p>
-            </div>
-        </div>
-        <div class="flex-box">
-            <div class="cuadrado"></div>
-            <div class="caracteristica">
-                <p class="texto-caracteristica">
-                    Apoyar en todo lo necesario a los responsables y personal de apoyo de cada área de interés.
-                </p>
-            </div>
-        </div>
+
     </div>
-    <div class="comite box box-2">
-        <div class="box-titulo">
-            <h1 class="titulo">Comité de gestión</h1>
-        </div>
-        <div class="grid-box">
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Desarrollo Web
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Jean Franco Martínez Roncal</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Eisten Flores Sánchez</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Desarrollo Móvil
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Anyi Lesli Rodríguez Urbano</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">José Miguel Zea Guerrero</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Base de Datos
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">José Andrés Bernaola Cedano</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Ninguno</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Inteligencia Artificial
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Claudio Ampuero Ramos</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Alexander Antony Romero Bizarro </p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Redes e Infraestructura
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Ronald Jhon Castro Leiva </p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Miguel Eduardo Velásquez Yzquierdo</p>
-                <p class="text">Danny Fabrizzio Chucos Sánchez </p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Modelamiento de Procesos de Negocios
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Enrique Miguel Chalco Vila</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Ninguno</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Calidad de Software
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Vieri García Moreno</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Ninguno</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Seguridad informática
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Diego Jesús Dávila Ortega</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Arnold Ingunza Álvarez</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Ciencia de Datos
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Francisco Aira Cespedes</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Juan Alexis Luque Ayala</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Inteligencia de Negocios
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Fabrizio Carrasco Santisteban </p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Sergio Bulnes Argote</p>
-                <p class="text">José Antonio Aira Retuerto </p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Negocios
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Vicente Mori Rojas</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Ninguno</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Gerencia de Proyectos
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Ángelo Jesús Davalos Salvador</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Sandra Silva Caruajulca</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Cloud
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Arnold Ingunza Álvarez</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">José La Rosa Menacho</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Gestión de TI
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Luis Miguel Casas Moya</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Ninguno</p>
-            </div>
-            <div class="area">
-                <p class="titulo-area">
-                    Área de Blockchain
-                </p>
-                <p class="subtitulos-area">Responsable</p>
-                <p class="tex">Josué Martínez Villa Garay</p>
-                <p class="subtitulos-area">Personal de apoyo</p>
-                <p class="text">Elmer Chipana Quispe</p>
-            </div>
+
+    <div class="grid-box">
+        <div *ngFor="let area of intersting_areas; let i = index" class="card animate">
+            <p class="titulo-area">
+                {{area.name}}
+            </p>
+            <hr />
+            <p class="subtitulos-area">Responsable</p>
+            <p class="tex"> {{area.responsable}}</p>
+            <p class="subtitulos-area">Personal de apoyo</p>
+            <p class="text"> {{area.support}}</p>
         </div>
     </div>
     <div class="box">
-        <p>Funciones:</p>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -216,7 +54,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -224,7 +62,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -232,7 +70,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -240,7 +78,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -248,7 +86,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -256,28 +94,25 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
-                    Enviar todo tipo de información (formulario, asistencias, entre otros) al área de análisis de datos
-                    para su uso.
+                    Enviar todo tipo de información (formulario, asistencias, entre otros) al área de análisis de
+                    datos para su uso.
                 </p>
             </div>
         </div>
     </div>
-    <div class="box">
-        <h1>Área Funcional de Redes Sociales</h1>
-        <p>
-            <span class="span">Responsable:</span> Cesar Raúl Cacho León
-        </p>
-        <p>
-            La red social que maneja por el momento CAET 21 es Facebook.
-        </p>
-        <p>
-            Funciones:
-        </p>
-        <div class="flex-box">
+    <div class="box" style="margin-top: 10px">
+        <h2 class="animate">Área Funcional de Redes Sociales</h2>
+        <div class="animate">
+            <p>
+                <span class="span">Responsable:</span> Cesar Raúl Cacho León
+            </p>
+            <hr />
+        </div>
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -285,7 +120,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -293,7 +128,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -301,7 +136,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -309,7 +144,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -318,15 +153,15 @@
             </div>
         </div>
     </div>
-    <div class="box">
-        <h1>Área Funcional de Pagina Web</h1>
-        <p>
-            <span class="span">Responsable:</span> Duván Sáenz Falcon
-        </p>
-        <p>
-            Funciones:
-        </p>
-        <div class="flex-box">
+    <div class="box" style="margin-top: 10px">
+        <h1 class="animate">Área Funcional de Pagina Web</h1>
+        <div class="animate">
+            <p>
+                <span class="span">Responsable:</span> Duván Sáenz Falcon
+            </p>
+            <hr />
+        </div>
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -334,7 +169,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-box">
+        <div class="flex-box animate">
             <div class="cuadrado"></div>
             <div class="caracteristica">
                 <p class="texto-caracteristica">
@@ -342,351 +177,71 @@
                 </p>
             </div>
         </div>
-        <div class="comite box box-2">
-            <div class="box-titulo">
-                <h1 class="titulo">Comité de gestión</h1>
-            </div>
-            <div class="grid-box">
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Desarrollo Web
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Jean Franco Martínez Roncal</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Eisten Flores Sánchez</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Desarrollo Móvil
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Anyi Lesli Rodríguez Urbano</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">José Miguel Zea Guerrero</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Base de Datos
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">José Andrés Bernaola Cedano</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Ninguno</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Inteligencia Artificial
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Claudio Ampuero Ramos</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Alexander Antony Romero Bizarro </p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Redes e Infraestructura
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Ronald Jhon Castro Leiva </p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Miguel Eduardo Velásquez Yzquierdo</p>
-                    <p class="text">Danny Fabrizzio Chucos Sánchez </p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Modelamiento de Procesos de Negocios
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Enrique Miguel Chalco Vila</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Ninguno</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Calidad de Software
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Vieri García Moreno</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Ninguno</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Seguridad informática
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Diego Jesús Dávila Ortega</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Arnold Ingunza Álvarez</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Ciencia de Datos
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Francisco Aira Cespedes</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Juan Alexis Luque Ayala</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Inteligencia de Negocios
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Fabrizio Carrasco Santisteban </p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Sergio Bulnes Argote</p>
-                    <p class="text">José Antonio Aira Retuerto </p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Negocios
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Vicente Mori Rojas</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Ninguno</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Gerencia de Proyectos
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Ángelo Jesús Davalos Salvador</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Sandra Silva Caruajulca</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Cloud
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Arnold Ingunza Álvarez</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">José La Rosa Menacho</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Gestión de TI
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Luis Miguel Casas Moya</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Ninguno</p>
-                </div>
-                <div class="area">
-                    <p class="titulo-area">
-                        Área de Blockchain
-                    </p>
-                    <p class="subtitulos-area">Responsable</p>
-                    <p class="tex">Josué Martínez Villa Garay</p>
-                    <p class="subtitulos-area">Personal de apoyo</p>
-                    <p class="text">Elmer Chipana Quispe</p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <p>Funciones:</p>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Dirigir las actividades de su área de interés.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Participar en las reuniones internas del comité de gestiones.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Compartir todo tipo de conocimiento, experiencia u ayuda en su área de interés.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Realizar reuniones internas con su misma área.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Coordinar con el área de edición para el diseño de flyers o videos.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Coordinar con el área de redes sociales para cualquier publicación en el fan page.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Enviar todo tipo de información (formulario, asistencias, entre otros) al área de análisis de
-                        datos para su uso.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <h1>Área Funcional de Redes Sociales</h1>
-            <p>
-                <span class="span">Responsable:</span> Cesar Raúl Cacho León
-            </p>
-            <p>
-                La red social que maneja por el momento CAET 21 es Facebook.
-            </p>
-            <p>
-                Funciones:
-            </p>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Administrar el fan page de CAET 21.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Publicar contenido relacionado a información general de tecnología o a cada área de interés.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Coordinar con el área de edición para el diseño de flyers o videos.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Proponer el inicio del uso de otra red social.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Administrar la página de YouTube.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <h1>Área Funcional de Pagina Web</h1>
-            <p>
-                <span class="span">Responsable:</span> Duván Sáenz Falcon
-            </p>
-            <p>
-                Funciones:
-            </p>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Publicar contenido relacionado a actividades importantes como conferencias, talleres o charlas.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Darle el mantenimiento a la página web.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <h1>Área Funcional de Edición</h1>
+    </div>
+    <div class="box" style="margin-top: 10px">
+        <h1 class="animate">Área Funcional de Edición</h1>
+        <div class="animate">
             <p>
                 <span class="span">Responsable:</span> Juan Carlos Flores Pucho
             </p>
-            <p>
-                Funciones:
-            </p>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Elaborar Flyer a solicitud de cada área de interés.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Solicitar cualquier tipo de información requerida para el diseño de Flyer.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Realizar videos siempre cuando sea necesario.
-                    </p>
-                </div>
+            <hr />
+        </div>
+        <div class="flex-box animate">
+            <div class="cuadrado"></div>
+            <div class="caracteristica">
+                <p class="texto-caracteristica">
+                    Elaborar Flyer a solicitud de cada área de interés.
+                </p>
             </div>
         </div>
-        <div class="box">
-            <h1>Área de Análisis de Datos</h1>
-            <p>
-                <span class="span">Responsable:</span> Jose Antonio Aira Retuerto
-            </p>
-            <p>
-                Funciones:
-            </p>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Recepcionar información (formulario, asistencias), de todas las áreas de interés.
-                    </p>
-                </div>
+        <div class="flex-box animate">
+            <div class="cuadrado"></div>
+            <div class="caracteristica">
+                <p class="texto-caracteristica">
+                    Solicitar cualquier tipo de información requerida para el diseño de Flyer.
+                </p>
             </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Manejar los datos de manera conveniente para lograr los objetivos trazados.
-                    </p>
-                </div>
-            </div>
-            <div class="flex-box">
-                <div class="cuadrado"></div>
-                <div class="caracteristica">
-                    <p class="texto-caracteristica">
-                        Brindar dashboard a solicitud de cada área de interés.
-                    </p>
-                </div>
+        </div>
+        <div class="flex-box animate">
+            <div class="cuadrado"></div>
+            <div class="caracteristica">
+                <p class="texto-caracteristica">
+                    Realizar videos siempre cuando sea necesario.
+                </p>
             </div>
         </div>
     </div>
+    <div class="box" style="margin-top: 10px">
+        <h1 class="animate">Área de Análisis de Datos</h1>
+        <div class="animate">
+            <p>
+                <span class="span">Responsable:</span> Jose Antonio Aira Retuerto
+            </p>
+            <hr />
+        </div>
+        <div class="flex-box animate">
+            <div class="cuadrado"></div>
+            <div class="caracteristica animate">
+                <p class="texto-caracteristica">
+                    Recepcionar información (formulario, asistencias), de todas las áreas de interés.
+                </p>
+            </div>
+        </div>
+        <div class="flex-box animate">
+            <div class="cuadrado"></div>
+            <div class="caracteristica">
+                <p class="texto-caracteristica">
+                    Manejar los datos de manera conveniente para lograr los objetivos trazados.
+                </p>
+            </div>
+        </div>
+        <div class="flex-box animate">
+            <div class="cuadrado"></div>
+            <div class="caracteristica">
+                <p class="texto-caracteristica">
+                    Brindar dashboard a solicitud de cada área de interés.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

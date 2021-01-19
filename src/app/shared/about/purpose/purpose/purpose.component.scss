@@ -1,32 +1,40 @@
-.example-card{ display: flex;
-  flex-direction: column; }
+@import "src/styles/styles.color.scss";
 
-mat-card-header{
-  background-color: rgb(152, 243, 213);
-  color: black;
+.purpose__content {
+  display: inline-flex;
+  color: white;
+  align-items: center;
 }
 
-mat-card{
-  height: 200px;
-  background-color: rgb(91, 211, 171);
+.purpose__title {
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.card-vision{
-  background-color: rgb(179, 180, 180);
-}
-
-p{
-  text-align: justify;
-  color: black;
-  font-size: large;
-  display: block;
-}
-
-.content-vision{
-  background-color:  rgb(241, 234, 234);
-}
-
-.card-title{
+.purpose__image {
+  width: 40%;
   text-align: center;
-  display: block;
+}
+
+.purpose__section {
+  width: 60%;
+}
+
+.section__mision {
+  background: $color_primary-02;
+  padding: 30px;
+}
+
+.section__vision {
+  background: $color_primary-03;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .purpose__image {
+    display: none;
+  }
+
+  .purpose__section {
+    width: 100%;
+  }
 }
