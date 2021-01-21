@@ -10,6 +10,7 @@
 @media (min-width: 992px) {
   .section__description {
     display: inline-flex;
+    padding: 40px;
   }
 
   .description__title {
@@ -29,6 +30,7 @@
 
   .body__text {
     margin: 0px 50px;
+    text-align: left;
   }
 }
 
