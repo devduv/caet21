@@ -1,14 +1,21 @@
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
 .carousel-container{
-   
+   height: 200px;
 }
 
 
 :host ::ng-deep{
 
     .igx-carousel__inner{
-        min-height: 300px !important;
+        min-height: auto !important;
+    }
+
+    @media (min-width: 725px) {
+        .carousel-container{
+            height: 350px;
+         }
+         
     }
 
     

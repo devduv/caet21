@@ -10,34 +10,34 @@
 
     <div>
         <div class="section__abstract animate" [ngClass]="abstract.class" *ngFor="let abstract of abstractList; let i = index">
-            <div *ngIf="i % 2 === 0" class="abstract__image ">
-                <img class="image__center image__center_left" [src]="abstract.src" style="width: 100%;" />
+            <div *ngIf="i % 2 === 0" class="abstract__image">
+                <img class="image__center card image__center_left" [src]="abstract.src" style="width: 100%;" />
 
                 <div class="abstract__title">
                     {{abstract.title}}
                 </div>
             </div>
 
-            <div *ngIf="i % 2 === 0" class="abstract__content background__even">
+            <div *ngIf="i % 2 === 0" class="abstract__content card background__even">
                 <div class="abstract__title__2">
                     {{abstract.title}}
                 </div>
-                <div class="abstract__body">
+                <div class="abstract__body" style="text-align: left;">
                     {{abstract.body}}
                 </div>
             </div>
 
-            <div *ngIf="i % 2 !== 0" class="abstract__content background__odd">
+            <div *ngIf="i % 2 !== 0" class="abstract__content card background__odd">
                 <div class="abstract__title__2">
                     {{abstract.title}}
                 </div>
-                <div class="abstract__body">
+                <div class="abstract__body"style="text-align: right">
                     {{abstract.body}}
                 </div>
             </div>
 
             <div *ngIf="i % 2 !== 0" class="abstract__image">
-                <img class="image__center image__center_right" [src]="abstract.src" style="width: 100%;" />
+                <img class="image__center image__center_right card" [src]="abstract.src" style="width: 100%;" />
 
                 <div class="abstract__title">
                     {{abstract.title}}
