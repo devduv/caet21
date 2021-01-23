@@ -1,0 +1,44 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.box {
+  margin: 1em;
+  padding: 1em;
+}
+
+.box-titulo-principal {
+  line-height: 2.5;
+  padding-left: 30px;
+  border-left: 10px solid #0d9479;
+  margin-bottom: 30px;
+}
+
+.formStyle {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field{
+  padding: 15px;
+}
+
+.form_style{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+// .animate__static {
+//   opacity: 0;
+//   transition: all 0.5s;
+// }
