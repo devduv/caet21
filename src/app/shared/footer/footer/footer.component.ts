@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var showStatic: any;
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,10 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  ngAfterViewInit() {
+    showStatic();
+  }
+
 
 }

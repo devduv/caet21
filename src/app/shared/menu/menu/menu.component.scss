@@ -52,3 +52,8 @@ mat-toolbar{
 ::ng-deep .customize {
     background: black;
   }
+
+
+::ng-deep .mat-menu-item {
+      color: white !important;
+  }

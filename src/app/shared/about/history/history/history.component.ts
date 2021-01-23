@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-
+import { AfterViewInit, Component, OnInit, HostListener, ElementRef } from '@angular/core';
 declare var showStatic: any;
+
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
@@ -8,7 +8,7 @@ declare var showStatic: any;
 })
 export class HistoryComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(public el: ElementRef) { }
 
   ngOnInit() {
   }
@@ -16,4 +16,5 @@ export class HistoryComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     showStatic();
   }
+
 }
