@@ -1,15 +1,15 @@
-@import './styles.font.scss';
+@import "./styles.font.scss";
 @import "src/styles/styles.color.scss";
-@import '~igniteui-angular/lib/core/styles/themes/index';
-@import './node_modules/ngx-org-chart/theming';
+@import "~igniteui-angular/lib/core/styles/themes/index";
+@import "./node_modules/ngx-org-chart/theming";
 
 @include igx-core();
 @include igx-theme($default-palette, $legacy-support: true);
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
 }
 
 .container {
@@ -76,10 +76,32 @@
     line-height: 2.5;
     padding-left: 30px;
     border-left: 10px solid $color_primary-03;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .mat-icon.mat-icon-inline {
     vertical-align: text-bottom;
     font-size: 20px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $color_primary-02 !important;
+}
+
+.mat-input-element {
+    caret-color: $color_primary-02 !important;
+}
+
+.mat-form-field {
+    font-size: 14px !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    color: black;
+}
+
+
+input:focus,
+select:focus {
+  outline: none;
 }
