@@ -78,7 +78,10 @@ export class ContactComponent implements OnInit {
     data.areaInteres = this.form.value['area'];
 
     console.log(data);
-    this.snackBar.open("Se envió", "AVISO", {duration: 2000});
+
+    // let google = require('src/assets/js/googleSheet.js');
+    // google.sendContactData(data);
+    this.snackBar.open("Se envió", "AVISO", {duration: 2000, panelClass: ['mat-snack-bar']});
 
     setTimeout(() => {
       this.limpiarControles();

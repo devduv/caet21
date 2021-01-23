@@ -35,7 +35,5 @@ async function accessGoogleSheet() {
 }());
 
 module.exports = {
-  accessGoogleSheet: accessGoogleSheet,
-  sendContactData: sendContactData(data)
+  sendContactData(data)
 }
-
