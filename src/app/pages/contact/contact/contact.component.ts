@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Menu, MenuService } from 'src/app/core/services/menu.service';
 import { map } from 'rxjs/operators';
@@ -28,10 +28,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.menuService.changeMenu(Menu.contact);
     this.form = new FormGroup({
-      'nombres': new FormControl(''),
-      'apellidos': new FormControl(''),
-      'correo': new FormControl(''),
-      'numero': new FormControl(''),
+      'nombres': new FormControl('', Validators.required),
+      'apellidos': new FormControl('', Validators.required),
+      'correo': new FormControl('', [Validators.required, Validators.email]),
+      'numero': new FormControl('', Validators.required),
       'area': this.controlArea,
       'mensaje': new FormControl('')
     });
@@ -40,6 +40,8 @@ export class ContactComponent implements OnInit {
 
     this.areasFiltradas$ = this.controlArea.valueChanges.pipe(map(val => this.filtrarAreas(val)));
   }
+
+  get f(){ return this.form.controls; }
 
   listarAreas(){
     this.areas = [
