@@ -1,39 +1,89 @@
-.container {
-  margin-right: auto;
-  margin-left: auto;
+@import "src/styles/styles.color.scss";
+
+mat-form-field {
+  padding: 8px 15px;
+  width: 100% !important;
 }
 
-.box {
-  margin: 1em;
-  padding: 1em;
-}
-
-.box-titulo-principal {
-  line-height: 2.5;
-  padding-left: 30px;
-  border-left: 10px solid #0d9479;
-  margin-bottom: 30px;
-}
-
-.formStyle {
+.form_style {
   display: flex;
   flex-direction: column;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 15px 10px;
 }
 
-mat-form-field{
-  padding: 15px;
+.invalido {
+  color: red;
 }
 
-.form_style{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+::ng-deep .mat-focused .mat-form-field-label {
+  color: $color_primary-02 !important;
 }
 
-.invalido{
-  color:red;
+::ng-deep.mat-form-field-underline {
+  background-color: $color_primary-02 !important;
 }
-// .animate__static {
-//   opacity: 0;
-//   transition: all 0.5s;
-// }
+
+::ng-deep.mat-form-field-ripple {
+  background-color: $color_primary-02 !important;
+}
+
+::ng-deep.mat-form-field-appearance-standard .mat-form-field-flex {
+  padding-top: 0px !important;
+}
+
+.btn__send {
+  color: white;
+  background: $color_primary-02 !important;
+  padding: 10px;
+  border-radius: 15px;
+  border: 0;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn__send:hover {
+  background: $color_secondary-01 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.form__dates {
+  display: inline-flex;
+}
+
+.contanct__section {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact__form {
+  width: 100%;
+}
+
+.contact__information {
+  width: 100%;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media (max-width: 992px) {
+  .contact__information {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .form__dates {
+    display: inline;
+  }
+}
+button:focus {
+  border: none;
+  outline: none;
+}

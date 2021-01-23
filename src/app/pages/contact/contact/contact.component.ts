@@ -41,34 +41,32 @@ export class ContactComponent implements OnInit {
     this.areasFiltradas$ = this.controlArea.valueChanges.pipe(map(val => this.filtrarAreas(val)));
   }
 
-  get f(){ return this.form.controls; }
+  get f() { return this.form.controls; }
 
-  listarAreas(){
+  listarAreas() {
     this.areas = [
       "Área de Desarrollo Web", "Área de Desarrollo Móvil", "Área de Base de Datos", "Área de Inteligencia Artificial",
       "Área de Redes e Infraestructura", "Área de Modelamiento de Procesos de Negocios", "Área de Calidad de Software",
       "Área de Seguridad informática", "Área de Ciencia de Datos"
     ];
-
-    console.log(this.areas);
   }
 
-  mostrarAreas(p: String){
+  mostrarAreas(p: String) {
     return p;
   }
 
-  seleccionarArea(p: any){
+  seleccionarArea(p: any) {
     console.log(p);
     this.areaSeleccionada = p.option.value;
   }
 
-  filtrarAreas(val: any){
+  filtrarAreas(val: any) {
     return this.areas.filter(ele =>
       ele.includes(val));
   }
 
-  enviar(){
-    if(this.form.invalid) {return;}
+  public enviar() {
+    if (this.form.invalid) { return; }
 
     let data = new InfoContacto;
     data.nombres = this.form.value['nombres'];
@@ -78,16 +76,16 @@ export class ContactComponent implements OnInit {
     data.areaInteres = this.form.value['area'];
 
     console.log(data);
-    this.snackBar.open("Se envió", "AVISO", {duration: 2000});
+    this.snackBar.open("Se envió", "AVISO", { duration: 2000 });
 
     setTimeout(() => {
       this.limpiarControles();
-    }, 2000)
+    }, 2000);
 
 
   }
 
-  limpiarControles(){
+  limpiarControles() {
     this.areaSeleccionada = null;
     this.controlArea.reset();
   }
