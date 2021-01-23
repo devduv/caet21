@@ -52,7 +52,7 @@
           </mat-form-field>
         </div>
 
-        <button mat-icon-button (click)="enviar()">
+        <button mat-icon-button (click)="enviar()" [disabled]="form.invalid">
           <mat-icon>send</mat-icon>
           <span>Enviar</span>
         </button>
