@@ -30,7 +30,8 @@
               "node_modules/material-design-icons/iconfont/material-icons.css"
             ],
             "scripts": [
-              "src/assets/js/animation.js"
+              "src/assets/js/animation.js",
+              "src/assets/js/googleSheet.js"
             ]
           },
           "configurations": {

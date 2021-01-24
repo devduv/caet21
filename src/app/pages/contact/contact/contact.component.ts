@@ -5,6 +5,8 @@ import { Menu, MenuService } from 'src/app/core/services/menu.service';
 import { map } from 'rxjs/operators';
 import { InfoContacto } from './../../../_model/infoContacto';
 import { MatSnackBar } from '@angular/material/snack-bar';
+// const { GoogleSpreadsheet } = require('google-spreadsheet');
+const keys = require('src/assets/js/keys.json');
 
 @Component({
   selector: 'app-contact',
@@ -19,7 +21,6 @@ export class ContactComponent implements OnInit {
   areas: String[];
   areasFiltradas$: Observable<String[]>;
   areaSeleccionada: String;
-
   constructor(
     private menuService: MenuService,
     private snackBar: MatSnackBar,
@@ -28,8 +29,8 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.menuService.changeMenu(Menu.contact);
     this.form = new FormGroup({
-      'nombres': new FormControl('', Validators.required),
-      'apellidos': new FormControl('', Validators.required),
+      'nombres': new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+      'apellidos': new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
       'correo': new FormControl('', [Validators.required, Validators.email]),
       'numero': new FormControl('', Validators.required),
       'area': this.controlArea,
@@ -37,7 +38,6 @@ export class ContactComponent implements OnInit {
     });
 
     this.listarAreas();
-
     this.areasFiltradas$ = this.controlArea.valueChanges.pipe(map(val => this.filtrarAreas(val)));
   }
 
@@ -56,7 +56,6 @@ export class ContactComponent implements OnInit {
   }
 
   seleccionarArea(p: any) {
-    console.log(p);
     this.areaSeleccionada = p.option.value;
   }
 
@@ -76,15 +75,18 @@ export class ContactComponent implements OnInit {
     data.areaInteres = this.form.value['area'];
 
     console.log(data);
-
-    // let google = require('src/assets/js/googleSheet.js');
-    // google.sendContactData(data);
+    this.fillGoogleSheet(data);
     this.snackBar.open("Se envió", "AVISO", {duration: 2000, panelClass: ['mat-snack-bar']});
 
     setTimeout(() => {
       this.limpiarControles();
     }, 2000);
 
+
+  }
+
+  fillGoogleSheet(data: any){
+    // let doc = new GoogleSpreadsheet('1XilTlajHbBPz91mWOOXGi74XC0xysts4849DCFglOok');
 
   }
 

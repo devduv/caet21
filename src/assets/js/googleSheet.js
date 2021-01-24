@@ -26,14 +26,10 @@ async function accessGoogleSheet() {
     correo: "vomoro96@gmail.com",
     numero: 990579194,
     areaInteres: "Área de Desarrollo Movil",
-    mensaje: ""
+    mensaje: "Test"
   }
   const addData = await sheet.addRows([
     { NOMBRES: data.nombres, APELLIDOS: data.apellidos, CORREO: data.correo, NÚMERO: data.numero, ÁREA: data.areaInteres, MENSAJE: data.mensaje}
   ]);
   console.log("Se añadío la información");
 }());
-
-module.exports = {
-  sendContactData(data)
-}

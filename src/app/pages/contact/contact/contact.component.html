@@ -28,7 +28,7 @@
           <div class="form__dates">
             <mat-form-field appearance="standard">
               <mat-label>Correo</mat-label>
-              <input matInput type="email" placeholder="Correo" required formControlName="correo">
+              <input matInput placeholder="Correo" required formControlName="correo">
               <mat-error *ngIf="f.correo.errors?.required && f.correo.touched" class="invalido">Ingrese un correo
                 electrónico válido</mat-error>
             </mat-form-field>
