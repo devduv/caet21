@@ -5,6 +5,7 @@ import { Menu, MenuService } from 'src/app/core/services/menu.service';
 import { map } from 'rxjs/operators';
 import { InfoContacto } from './../../../_model/infoContacto';
 import { MatSnackBar } from '@angular/material/snack-bar';
+declare let Email: any;
 
 @Component({
   selector: 'app-contact',
@@ -76,6 +77,7 @@ export class ContactComponent implements OnInit {
     data.areaInteres = this.form.value['area'];
 
     console.log(data);
+    this.sendMessage(data.correo, data.areaInteres, data.nombres, data.apellidos);
     this.snackBar.open("Se envió", "AVISO", { duration: 2000 });
 
     setTimeout(() => {
@@ -88,5 +90,20 @@ export class ContactComponent implements OnInit {
   limpiarControles() {
     this.areaSeleccionada = null;
     this.controlArea.reset();
+    this.form.reset();
+  }
+
+  sendMessage(correo: String, areaInteres: String, nombres: String, apellidos: String) {
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "caet21prueba@gmail.com",
+        Password : "AC3EBF524C1A0E0EF64E56B62EFF419C43D1",
+        To : correo,
+        From : "caet21prueba@gmail.com",
+        Subject : "Bienvenidos al "+areaInteres,
+        Body : "<h1> Hola, "+nombres+" "+apellidos+"</h1>"
+              +"\n <h2>Gracias por elegir el "+ areaInteres+" nos estaremos comunicando contigo.</h2>"
+    }).then(message => alert(message));
   }
 }
