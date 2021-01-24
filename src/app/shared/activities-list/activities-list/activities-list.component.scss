@@ -1,5 +1,5 @@
 .card {
-/*     max-width: 500px;
+    /*     max-width: 500px;
     max-height: 300px; */
 }
 
@@ -30,7 +30,8 @@
     top: 0;
     background: #0d9479cf;
     padding: 25px;
-    border-bottom-left-radius: 15px;;
+    border-bottom-left-radius: 15px;
+    ;
 }
 
 mat-grid-tile {
@@ -67,4 +68,8 @@ mat-grid-tile {
 
 .activity_list {
     display: inline-flex;
+}
+
+.mat-tab-group {
+    margin-bottom: 48px;
 }
