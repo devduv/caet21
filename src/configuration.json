@@ -1,0 +1,8 @@
+{
+    "email": {
+        "host": "smtp.elasticemail.com",
+        "username": "caet21prueba@gmail.com",
+        "password": "AC3EBF524C1A0E0EF64E56B62EFF419C43D1",
+        "from": "caet21prueba@gmail.com"
+    }
+}

@@ -21,7 +21,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/configuration.json"
             ],
             "styles": [
               "node_modules/font-awesome/css/font-awesome.min.css",
@@ -30,7 +31,8 @@
               "node_modules/material-design-icons/iconfont/material-icons.css"
             ],
             "scripts": [
-              "src/assets/js/animation.js"
+              "src/assets/js/animation.js",
+              "src/assets/js/smtp.js"
             ]
           },
           "configurations": {
@@ -131,5 +133,8 @@
     "@schematics/angular:component": {
       "style": "scss"
     }
+  },
+  "cli": {
+    "analytics": "eec7c2d1-8655-4b49-974e-7b5e503ae208"
   }
 }
