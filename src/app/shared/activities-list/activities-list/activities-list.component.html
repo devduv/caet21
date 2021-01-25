@@ -1,13 +1,13 @@
 <div class="container">
     <div class="box">
-        <mat-tab-group animationDuration="1000ms" tabmode="fixed">
-            <mat-tab label="Talleres">
+        <mat-tab-group animationDuration="1000ms">
+            <mat-tab label="Talleres" style="font-size: large;">
                 <div class="activity_list animate__static">
                     <div *ngFor="let taller of talleres; let i = index" class="card-responsive">
                         <mat-card class="card">
                             <img mat-card-image [src]="taller.source" class="img-card">
                             <mat-card-content>
-                                <div style="font-size: 18px; text-align: center"> {{taller.nombre}} </div>
+                                <div style="font-size: 18px; text-align: center; color: white;"> {{taller.nombre}} </div>
 
                                 <div class="taller-card-div">
                                     <mat-icon [inline]="true">date_range</mat-icon> {{taller.fecha}}
@@ -22,11 +22,11 @@
             </mat-tab>
             <mat-tab label="Conferencias">
                 <div *ngFor="let conferencia of conferencias;">
-                    <mat-card class="card animate">
+                    <mat-card class="card animate animate__static">
                         <img mat-card-image class="img-card" [src]="conferencia.source" />
                         <div class="abstract__content">
 
-                            <div style="text-align: center;">
+                            <div style="text-align: center; color: white;">
                                 <span style="font-size: 25px;">{{conferencia.nombre}}</span>
                             </div>
                             <div class="abstract__body">
