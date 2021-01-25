@@ -100,8 +100,21 @@
     color: black;
 }
 
-
 input:focus,
 select:focus {
-  outline: none;
+    outline: none;
+}
+
+.mat-snack-bar {
+    background: #19bc9c;
+    color: white !important;
+}
+
+.mat-snack-bar-error {
+    background: #eb0046;
+    color: white !important;
+}
+
+.mat-card-content {
+    color: white !important;
 }

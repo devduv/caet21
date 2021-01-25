@@ -31,4 +31,43 @@
       <img src="./assets/images/logo/caet.png" style="width: 70%;">
     </div>
   </div>
+  <div class="purpose__content__2">
+    <div class="section__abstract animate__static" [ngClass]="abstract.class"
+      *ngFor="let abstract of abstractList; let i = index">
+      <div *ngIf="i % 2 === 0" class="abstract__image">
+        <img class="image__center card image__center_left" [src]="abstract.image" style="width: 100%;" />
+
+        <div class="abstract__title">
+          {{abstract.title}}
+        </div>
+      </div>
+
+      <div *ngIf="i % 2 === 0" class="abstract__content card background__even">
+        <div class="abstract__title__2">
+          {{abstract.title}}
+        </div>
+        <div class="abstract__body" style="text-align: left;">
+          {{abstract.body}}
+        </div>
+      </div>
+
+      <div *ngIf="i % 2 !== 0" class="abstract__content card background__odd">
+        <div class="abstract__title__2">
+          {{abstract.title}}
+        </div>
+        <div class="abstract__body" style="text-align: right">
+          {{abstract.body}}
+        </div>
+      </div>
+
+      <div *ngIf="i % 2 !== 0" class="abstract__image">
+        <img class="image__center image__center_right card" [src]="abstract.image" style="width: 100%;" />
+
+        <div class="abstract__title">
+          {{abstract.title}}
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
