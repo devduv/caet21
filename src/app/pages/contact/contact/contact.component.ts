@@ -5,6 +5,7 @@ import { Menu, MenuService } from 'src/app/core/services/menu.service';
 import { map } from 'rxjs/operators';
 import { InfoContacto } from './../../../_model/infoContacto';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ConfigurationService } from 'src/app/core/services/configuration.service';
 declare let Email: any;
 
 @Component({
@@ -16,30 +17,40 @@ export class ContactComponent implements OnInit {
 
   form: FormGroup;
   controlArea: FormControl = new FormControl();
-
+  avaliable: boolean;
   areas: String[];
   areasFiltradas$: Observable<String[]>;
   areaSeleccionada: String;
 
+  configuration: any;
+
   constructor(
     private menuService: MenuService,
     private snackBar: MatSnackBar,
-  ) { }
+    private configurationService: ConfigurationService
+  ) { 
+    this.listarAreas();
+  }
 
   ngOnInit() {
     this.menuService.changeMenu(Menu.contact);
+    this.getConfiguration();
+    this.initForm();
+   
+    this.areasFiltradas$ = this.controlArea.valueChanges.pipe(map(val => this.filtrarAreas(val)));
+  }
+
+  private initForm() {
     this.form = new FormGroup({
-      'nombres': new FormControl('', Validators.required),
-      'apellidos': new FormControl('', Validators.required),
-      'correo': new FormControl('', [Validators.required, Validators.email]),
-      'numero': new FormControl('', Validators.required),
+      'name': new FormControl('', [Validators.required, Validators.maxLength(40),
+      Validators.pattern(/^[^0-9]{1,40}$/)]),
+      'lastname': new FormControl('', [Validators.required, Validators.maxLength(40),
+      Validators.pattern(/^[^0-9]{1,40}$/)]),
+      'email': new FormControl('', [Validators.required, Validators.email]),
+      'phone': new FormControl('', Validators.required),
       'area': this.controlArea,
       'mensaje': new FormControl('')
     });
-
-    this.listarAreas();
-
-    this.areasFiltradas$ = this.controlArea.valueChanges.pipe(map(val => this.filtrarAreas(val)));
   }
 
   get f() { return this.form.controls; }
@@ -66,25 +77,25 @@ export class ContactComponent implements OnInit {
       ele.includes(val));
   }
 
+  private findArea(areaSelected: string) {
+    return this.areas.find(area => area === areaSelected);
+  }
+
   public enviar() {
-    if (this.form.invalid) { return; }
-
+    if (this.form.invalid) return; 
+    if (this.findArea( this.form.value['area']) === undefined) {
+      this.snackBar.open("Área de Interés no existe", "", { duration: 2000, panelClass: ['mat-snack-bar-error'] });
+      return;
+    }
     let data = new InfoContacto;
-    data.nombres = this.form.value['nombres'];
-    data.apellidos = this.form.value['apellidos'];
-    data.correo = this.form.value['correo'];
-    data.numero = this.form.value['numero'];
+    data.nombres = this.form.value['name'];
+    data.apellidos = this.form.value['lastname'];
+    data.correo = this.form.value['email'];
+    data.numero = this.form.value['phone'];
     data.areaInteres = this.form.value['area'];
-
-    console.log(data);
+    data.mensaje = this.form.value['mensaje'];
     this.sendMessage(data.correo, data.areaInteres, data.nombres, data.apellidos);
-    this.snackBar.open("Se envió", "AVISO", { duration: 2000 });
-
-    setTimeout(() => {
-      this.limpiarControles();
-    }, 2000);
-
-
+    this.snackBar.open("Datos enviados satisfactoriamente!", "", { duration: 2000, panelClass: ['mat-snack-bar'] });
   }
 
   limpiarControles() {
@@ -94,16 +105,25 @@ export class ContactComponent implements OnInit {
   }
 
   sendMessage(correo: String, areaInteres: String, nombres: String, apellidos: String) {
-
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "caet21prueba@gmail.com",
-        Password : "AC3EBF524C1A0E0EF64E56B62EFF419C43D1",
-        To : correo,
-        From : "caet21prueba@gmail.com",
-        Subject : "Bienvenidos al "+areaInteres,
-        Body : "<h1> Hola, "+nombres+" "+apellidos+"</h1>"
-              +"\n <h2>Gracias por elegir el "+ areaInteres+" nos estaremos comunicando contigo.</h2>"
-    }).then(message => alert(message));
+      Host: this.configuration.email.host,
+      Username: this.configuration.email.username,
+      Password: this.configuration.email.password,
+      To: correo,
+      From: this.configuration.email.from,
+      Subject: "Bienvenidos al " + areaInteres,
+      Body: "<h1> Hola, " + nombres + " " + apellidos + "</h1>"
+        + "\n <h2>Gracias por elegir el " + areaInteres + " nos estaremos comunicando contigo.</h2>"
+    });
+  }
+
+  async getConfiguration() {
+    this.configuration = await this.configurationService.getConfiguration();
+  }
+
+  keyPressMobil($event) {
+    const textInput = $event.target.value.toString();
+    const text = textInput.replace(/[^a-zA-ZÀ-ÿ\u00f1\u00d1\u0020\u0027]/g, '');
+    this.form.patchValue({ name: text });
   }
 }

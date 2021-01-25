@@ -10,16 +10,16 @@
           <div class="form__dates">
             <mat-form-field appearance="standard">
               <mat-label>Nombres</mat-label>
-              <input matInput placeholder="Nombres" required formControlName="nombres">
-              <mat-error *ngIf="f.nombres.errors?.required && f.nombres.touched" class="invalido">Ingrese un nombre
+              <input matInput placeholder="Nombres" required formControlName="name" id="name" (input)="keyPressMobil($event)">
+              <mat-error *ngIf="f.name.errors?.required && f.name.touched" class="invalido">Ingrese un nombre
                 válido
               </mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="standard">
               <mat-label>Apellidos</mat-label>
-              <input matInput placeholder="Apellidos" required formControlName="apellidos">
-              <mat-error *ngIf="f.apellidos.errors?.required && f.apellidos.touched" class="invalido">Ingrese un
+              <input matInput placeholder="Apellidos" required formControlName="lastname" id="lastname" (input)="keyPressMobil($event)">
+              <mat-error *ngIf="f.lastname.errors?.required && f.lastname.touched" class="invalido">Ingrese un
                 apellido
                 válido</mat-error>
             </mat-form-field>
@@ -28,17 +28,17 @@
           <div class="form__dates">
             <mat-form-field appearance="standard">
               <mat-label>Correo</mat-label>
-              <input matInput type="email" placeholder="Correo" required formControlName="correo">
-              <mat-error *ngIf="f.correo.errors?.required && f.correo.touched" class="invalido">Ingrese un correo
+              <input matInput type="email" placeholder="Correo" required formControlName="email" id="email">
+              <mat-error *ngIf="f.email.errors?.required && f.email.touched" class="invalido">Ingrese un correo
                 electrónico válido</mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="standard">
               <mat-label>Número</mat-label>
-              <input matInput placeholder="Número" required formControlName="numero" max="9" maxlength="9" type="number"
-                max="9" maxlength="9" type="number"
+              <input matInput placeholder="Número" required formControlName="phone" max="9" maxlength="9" type="number"
+                max="9" maxlength="9" type="number" id="phone"
                 oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-              <mat-error *ngIf="f.numero.errors?.required && f.numero.touched" class="invalido">Ingrese un número de
+              <mat-error *ngIf="f.phone.errors?.required && f.phone.touched" class="invalido">Ingrese un número de
                 celular válido</mat-error>
             </mat-form-field>
           </div>
