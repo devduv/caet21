@@ -2,7 +2,6 @@
 @import "src/styles/styles.color.scss";
 @import "~igniteui-angular/lib/core/styles/themes/index";
 @import "./node_modules/ngx-org-chart/theming";
-
 @include igx-core();
 @include igx-theme($default-palette, $legacy-support: true);
 * {
@@ -98,6 +97,10 @@
 
 .mat-form-field-appearance-legacy .mat-form-field-label {
     color: black;
+}
+
+.mat-tab-label .mat-tab-label-content {
+    font-size: large;
 }
 
 input:focus,

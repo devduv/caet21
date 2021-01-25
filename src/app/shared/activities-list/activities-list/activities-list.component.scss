@@ -1,5 +1,5 @@
 .card {
-/*     max-width: 500px;
+    /*     max-width: 500px;
     max-height: 300px; */
 }
 
@@ -21,6 +21,7 @@
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
+    color: white;
 }
 
 .taller-card-div-2 {
@@ -30,7 +31,8 @@
     top: 0;
     background: #0d9479cf;
     padding: 25px;
-    border-bottom-left-radius: 15px;;
+    border-bottom-left-radius: 15px;
+    ;
 }
 
 mat-grid-tile {
@@ -58,6 +60,7 @@ mat-grid-tile {
 
 .abstract__body {
     margin: 25px;
+    color: white;
 }
 
 .card-responsive {
@@ -67,4 +70,8 @@ mat-grid-tile {
 
 .activity_list {
     display: inline-flex;
+}
+
+.mat-tab-group {
+    margin-bottom: 48px;
 }

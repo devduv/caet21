@@ -1,63 +1,59 @@
 <div class="container">
     <div class="box">
-        <div class="box-titulo-principal animate__static">
-            <h1>Talleres</h1>
-        </div>
+        <mat-tab-group animationDuration="1000ms">
+            <mat-tab label="Talleres" style="font-size: large;">
+                <div class="activity_list animate__static">
+                    <div *ngFor="let taller of talleres; let i = index" class="card-responsive">
+                        <mat-card class="card">
+                            <img mat-card-image [src]="taller.source" class="img-card">
+                            <mat-card-content>
+                                <div style="font-size: 18px; text-align: center; color: white;"> {{taller.nombre}} </div>
 
-        <div class="activity_list animate__static">
-            <div *ngFor="let taller of talleres; let i = index" class="card-responsive">
-                <mat-card class="card">
-                    <img mat-card-image [src]="taller.source" class="img-card">
-                    <mat-card-content>
-                        <div style="font-size: 18px; text-align: center"> {{taller.nombre}} </div>
-
-                        <div class="taller-card-div">
-                            <mat-icon [inline]="true">date_range</mat-icon> {{taller.fecha}}
-                        </div>
-                        <div class="taller-card-div">
-                            <mat-icon [inline]="true">schedule</mat-icon> {{taller.hora}}
-                        </div>
-                    </mat-card-content>
-                </mat-card>
-            </div>
-        </div>
-
-
-        <!-- <div class="box-titulo-principal animate" style="margin-top: 15px;">
-            <h1>Conferencias</h1>
-        </div>
-
-        <div *ngFor="let conferencia of conferencias;">
-            <mat-card class="card animate">
-                <img mat-card-image class="img-card" [src]="conferencia.source" />
-                <div class="abstract__content">
-
-                    <div style="text-align: center;">
-                        <span style="font-size: 25px;">{{conferencia.nombre}}</span>
-                    </div>
-                    <div class="abstract__body">
-                        <div>
-                            <b>Exponente:</b>
-                        </div>
-                        <div>
-                            <span>{{conferencia.exponente}} </span>
-                        </div>
-                        <div>
-                            <span>{{conferencia.cargoExponente}}</span>
-                        </div>
-                    </div>
-
-                    <div class="taller-card-div-2">
-                        <div>
-                            <mat-icon [inline]="true">date_range</mat-icon> {{conferencia.fecha}}
-                        </div>
-                        <div>
-                            <mat-icon [inline]="true">schedule</mat-icon> {{conferencia.hora}}
-                        </div>
+                                <div class="taller-card-div">
+                                    <mat-icon [inline]="true">date_range</mat-icon> {{taller.fecha}}
+                                </div>
+                                <div class="taller-card-div">
+                                    <mat-icon [inline]="true">schedule</mat-icon> {{taller.hora}}
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
                     </div>
                 </div>
-            </mat-card>
-        </div> -->
+            </mat-tab>
+            <mat-tab label="Conferencias">
+                <div *ngFor="let conferencia of conferencias;">
+                    <mat-card class="card animate animate__static">
+                        <img mat-card-image class="img-card" [src]="conferencia.source" />
+                        <div class="abstract__content">
+
+                            <div style="text-align: center; color: white;">
+                                <span style="font-size: 25px;">{{conferencia.nombre}}</span>
+                            </div>
+                            <div class="abstract__body">
+                                <div>
+                                    <b>Exponente:</b>
+                                </div>
+                                <div>
+                                    <span>{{conferencia.exponente}} </span>
+                                </div>
+                                <div>
+                                    <span>{{conferencia.cargoExponente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="taller-card-div-2">
+                                <div>
+                                    <mat-icon [inline]="true">date_range</mat-icon> {{conferencia.fecha}}
+                                </div>
+                                <div>
+                                    <mat-icon [inline]="true">schedule</mat-icon> {{conferencia.hora}}
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
     </div>
 
 </div>
