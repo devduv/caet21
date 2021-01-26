@@ -1,6 +1,6 @@
 <mat-toolbar  class="app-toolbar mat-elevation-z2">
     <div fxHide.gt-xs>
-        <button mat-icon-button (click)="onToggleSidenav()">
+        <button mat-icon-button (click)="onToggleSidenav()" style="color:white !important">
             <mat-icon>menu</mat-icon>
         </button>
     </div>
@@ -18,8 +18,8 @@
             </li>
             <mat-menu #listNosotros="matMenu" class="customize">
                 <button mat-menu-item (click)="changeMenu('nosotros/historia')">Historia</button>
-                <button mat-menu-item (click)="changeMenu('nosotros/organigrama')">Organigrama</button>
                 <button mat-menu-item (click)="changeMenu('nosotros/proposito')">Misión y visión</button>
+                <button mat-menu-item (click)="changeMenu('nosotros/organigrama')">Organigrama</button>
             </mat-menu>            
             <li>
                 <a (click)="changeMenu('actividades')" mat-button>Actividades</a>

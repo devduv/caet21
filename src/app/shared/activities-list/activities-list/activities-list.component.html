@@ -1,13 +1,20 @@
 <div class="container">
+
     <div class="box">
+        <div class="box-titulo-principal">
+          <h1>Actividades</h1>
+        </div>
+    </div>
+
+    <div>
         <mat-tab-group animationDuration="1000ms">
             <mat-tab label="Talleres" style="font-size: large;">
-                <div class="activity_list animate__static">
-                    <div *ngFor="let taller of talleres; let i = index" class="card-responsive">
-                        <mat-card class="card">
+                <div class="grid-box">
+                    <div *ngFor="let taller of talleres; let i = index">
+                        <mat-card>
                             <img mat-card-image [src]="taller.source" class="img-card">
                             <mat-card-content>
-                                <div style="font-size: 18px; text-align: center; color: white;"> {{taller.nombre}} </div>
+                                <div style="font-size: 18px; text-align: center; color: white;"> <b>{{taller.nombre}}</b> </div>
 
                                 <div class="taller-card-div">
                                     <mat-icon [inline]="true">date_range</mat-icon> {{taller.fecha}}
@@ -22,7 +29,7 @@
             </mat-tab>
             <mat-tab label="Conferencias">
                 <div *ngFor="let conferencia of conferencias;">
-                    <mat-card class="card animate animate__static">
+                    <mat-card class="card">
                         <img mat-card-image class="img-card" [src]="conferencia.source" />
                         <div class="abstract__content">
 

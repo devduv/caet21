@@ -25,7 +25,7 @@
             <p class="subtitulos-area">Responsable</p>
             <p class="tex"> {{area.responsable}}</p>
             <p class="subtitulos-area">Personal de apoyo</p>
-            <p class="text"> {{area.support}}</p>
+            <p class="text" *ngFor="let support of area.supports"> {{support.name}}</p>
         </div>
     </div>
 </div>

@@ -121,3 +121,26 @@ select:focus {
 .mat-card-content {
     color: white !important;
 }
+
+
+.grid-box {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .grid-box {
+        grid-template-columns: 45% 45%;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .grid-box {
+        grid-template-columns: 80%;
+        grid-column-gap: 0px;
+    }
+}
