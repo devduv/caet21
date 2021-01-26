@@ -1,1 +1,74 @@
-<p>contact-form works!</p>
+<div class="contanct__section">
+    <div class="contact__form">
+        <form class="form_style" [formGroup]="form" (ngSubmit)="enviar()">
+            <div class="form__dates">
+                <mat-form-field appearance="standard">
+                    <mat-label>Nombres</mat-label>
+                    <input matInput placeholder="Nombres" required formControlName="name" id="name"
+                        (input)="keyPressMobil($event, 'name')">
+                    <mat-error *ngIf="f.name.errors?.required && f.name.touched" class="invalido">Ingrese un nombre
+                        válido
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="standard">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput placeholder="Apellidos" required formControlName="lastname" id="lastname"
+                        (input)="keyPressMobil($event, 'lastname')">
+                    <mat-error *ngIf="f.lastname.errors?.required && f.lastname.touched" class="invalido">Ingrese un
+                        apellido
+                        válido</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="form__dates">
+                <mat-form-field appearance="standard">
+                    <mat-label>Correo</mat-label>
+                    <input matInput type="email" placeholder="Correo" required formControlName="email" id="email">
+                    <mat-error *ngIf="f.email.errors?.required && f.email.touched" class="invalido">Ingrese un correo
+                        electrónico válido</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="standard">
+                    <mat-label>Número</mat-label>
+                    <input matInput placeholder="Número" required formControlName="phone" max="9" maxlength="9"
+                        type="number" max="9" maxlength="9" type="number" id="phone"
+                        oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    <mat-error *ngIf="f.phone.errors?.required && f.phone.touched" class="invalido">Ingrese un número de
+                        celular válido</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="standard">
+                    <mat-label>Área de Interes</mat-label>
+                    <input matInput placeholder="Área de Interes" matInput [matAutocomplete]="autoArea"
+                        [formControl]="controlArea" formControlName="area" required>
+                    <mat-error *ngIf="f.area.errors?.required && f.area.touched" class="invalido">Ingrese un Área de
+                        Interés
+                    </mat-error>
+                </mat-form-field>
+                <mat-autocomplete #autoArea="matAutocomplete" [displayWith]="mostrarAreas"
+                    (optionSelected)="seleccionarArea($event)">
+                    <mat-option *ngFor="let a of areasFiltradas$ | async" [value]="a">
+                        {{ a }}
+                    </mat-option>
+                </mat-autocomplete>
+            </div>
+            <div>
+                <mat-form-field appearance="fill" style="width: 100%;">
+                    <mat-label>Mensaje</mat-label>
+                    <textarea matInput placeholder="Mensaje" formControlName="mensaje"></textarea>
+                </mat-form-field>
+            </div>
+
+            <button class="btn__send" type="submit">
+                <mat-icon [inline]="true">send</mat-icon> Enviar
+            </button>
+
+        </form>
+    </div>
+    <div class="contact__information">
+        <img src="./assets/images/contacts/contacts.jpg" style="width: 90%;" />
+    </div>
+</div>

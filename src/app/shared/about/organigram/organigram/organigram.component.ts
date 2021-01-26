@@ -24,77 +24,106 @@ export class OrganigramComponent implements OnInit, AfterViewInit {
     {
       name: 'Área de Desarrollo Web',
       responsable: 'Jean Franco Martínez Roncal',
-      support: 'Eisten Flores Sánchez'
+      supports: [
+        { name: 'Eisten Flores Sánchez' }
+      ]
     },
     {
       name: 'Área de Desarrollo Móvil',
       responsable: 'Anyi Lesli Rodríguez Urbano',
-      support: 'José Miguel Zea Guerrero'
+      supports: [{ name: 'José Miguel Zea Guerrero' }]
     },
     {
       name: 'Área de Base de Datos',
       responsable: 'José Andrés Bernaola Cedano',
-      support: 'Ninguno'
+      supports: [{ name: 'Ninguno' }]
     },
     {
       name: 'Área de Inteligencia Artificial',
       responsable: 'Claudio Ampuero Ramos',
-      support: 'Alexander Antony Romero Bizarro'
+      supports: [{
+        name: 'Alexander Antony Romero Bizarro'
+      }]
     },
     {
       name: 'Área de Redes e Infraestructura',
       responsable: 'Ronald Jhon Castro Leiva',
-      support: 'Miguel Eduardo Velásquez Yzquierdo'
+      supports: [{
+        name: 'Miguel Eduardo Velásquez Yzquierdo'
+      }, {
+        name: 'Danny Fabrizzio Chucos Sánchez'
+      }]
     },
     {
       name: 'Área de Modelamiento de Procesos de Negocios',
       responsable: 'Enrique Miguel Chalco Vila',
-      support: 'Ninguno'
+      supports: [{
+        name: 'Ninguno'
+      }]
     },
     {
       name: 'Área de Calidad de Software',
       responsable: 'Vieri García Moreno',
-      support: 'Ninguno'
+      supports: [{
+        name: 'Ninguno'
+      }]
     },
     {
       name: 'Área de Seguridad informática',
       responsable: 'Diego Jesús Dávila Ortega',
-      support: 'Arnold Ingunza Álvarez'
+      support: [{
+        name: 'Arnold Ingunza Álvarez'
+      }]
     },
     {
       name: 'Área de Ciencia de Datos',
       responsable: 'Francisco Aira Cespedes',
-      support: 'Juan Alexis Luque Ayala'
+      supports: [{
+        name: 'Juan Alexis Luque Ayala'
+      }]
     },
     {
       name: 'Área de Inteligencia de Negocios',
       responsable: 'Fabrizio Carrasco Santisteban',
-      support: 'Sergio Bulnes Argote'
+      supports: [{
+        name: 'Sergio Bulnes Argote'
+      },
+      {
+        name: 'José Antonio Aira Retuerto'
+      }]
     },
     {
       name: 'Área de Negocios',
       responsable: 'Vicente Mori Rojas',
-      support: 'Ninguno'
+      supports: [{
+        name: 'Ninguno'
+      }]
     },
     {
       name: 'Área de Gerencia de Proyectos',
       responsable: 'Ángelo Jesús Davalos Salvado',
-      support: 'Sandra Silva Caruajulca'
+      supports: [{
+        name: 'Sandra Silva Caruajulca'
+      }]
     },
     {
       name: 'Área de Cloud',
       responsable: 'Arnold Ingunza Álvarez',
-      support: 'José La Rosa Menacho'
+      supports: [{
+        name: 'José La Rosa Menacho'
+      }]
     },
     {
       name: 'Área de Gestión de TI',
       responsable: 'Luis Miguel Casas Moya',
-      support: 'Ninguno'
+      supports: [{
+        name: 'Ninguno'
+      }]
     },
     {
       name: 'Área de Blockchain',
       responsable: 'Josué Martínez Villa Garay',
-      support: 'Elmer Chipana Quispe'
+      supports: [{ name: 'Elmer Chipana Quispe' }]
     },
   ];
 
