@@ -23,7 +23,7 @@
 
 .taller-card-div-2 {
     position: absolute;
-    /* float: right; */
+    color: white !important;
     right: 0;
     top: 0;
     background: #0d9479cf;
@@ -72,3 +72,9 @@ mat-grid-tile {
 :host::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: $color_primary-01;
 }
+:host::ng-deep .img-card {
+    height: 300px !important;
+}
+a {
+    text-decoration: none;
+  }
