@@ -11,109 +11,22 @@
   </header>
   <div class="container-timeline">
     <ul class="timeline">
-      <li>
-        <div class="direction-r">
-          <div class="flag-wrapper animate__static">
-            <span class="hexa"></span>
-            <span class="time-wrapper"><span class="time">30 de Octubre 2020</span></span>
-          </div>
-          <div class=" animate__static">
-            <div class="overlay-box sombreado" style="background-image: url('./assets/images/historia/iniciativa.jpg');">
-            <div class="desc2">
-              <h2 class="titleH3">Iniciativa</h2>
-              Nace la idea e iniciativa para crear una Comunidad llamada inicialmente “Proyecto de
-              Especialización según área de Interés “ que busca integrar a todos los alumnos de la FISI – UNMSM de
-              distintos
-              grados en una misma comunidad y poder compartir sus conocimientos según el área que se especialicen.
-            </div>
-          </div>
-          </div>
-        </div>
-      </li>
-  
-      <li>
-        <div class="direction-l">
-          <div class="flag-wrapper animate__static">
-            <span class="hexa"></span>
-            <span class="time-wrapper"><span class="time">05 de Diciembre 2020</span></span>
-          </div>
-          <div class="animate">
-          <div class="overlay-box animate sombreado" style="background-image: url('./assets/images/historia/nombre.jpg'); ">
-            <div class="desc2">
-              <h2 class="titleH3">Nombre</h2>
-              Se da la Primera Reunión Oficial del Grupo donde se oficializa el nombre “Club académico
-              Estudiantil de Tecnología” – CAET21 . Además, se da la presentación de cada responsable y/o personal de
-              apoyo
-              de cada área de Interés.
-            </div>
-          </div>
-        </div>
-        </div>
-      </li>
-  
-      <li>
-        <div class="direction-r animate">
+      <li *ngFor="let item of historyList; let i = index">
+        <div [ngClass]="i % 2 === 0 ? 'direction-r' : 'direction-l'">
           <div class="flag-wrapper">
             <span class="hexa"></span>
-            <span class="time-wrapper"><span class="time">13 de Diciembre 2020</span></span>
+            <span class="time-wrapper"><span class="time">{{item?.date}}</span></span>
           </div>
-          <div class="overlay-box animate sombreado"
-            style="background-image: url('./assets/images/historia/difusión.jpg');">
-            <div class="desc2">
-              <h2 class="titleH3">Difusión</h2>
-              Se difunde de manera oficial, en grupos de mayor cantidad de miembros fisianos de Facebook ,
-              el proyecto CAET 21, para invitarlos a pertenecer y que puedan compartir con nosotros, esta gran experiencia
-              de ser una comunidad netamente de alumnos de la facultad FISI . Días después, cada responsable hizo su
-              presentación e invitación para que puedan pertenecer a su área de interés.
+          <div>
+            <div class="overlay-box sombreado" [ngStyle]="{'background-image': 'url(' + item?.image + ')'}">
+              <div class="desc2">
+                <h2 class="titleH3">{{item?.title}}</h2>
+                {{item?.content}}
+              </div>
             </div>
           </div>
         </div>
-      </li>
-  
-  
-      <li>
-        <div class="direction-l animate">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="time-wrapper"><span class="time">06 de Enero 2021</span></span>
-          </div>
-          <div class="overlay-box sombreado" style="background-image: url('./assets/images/historia/yt.jpg');" >
-            <div class="desc2">
-              <h2 class="titleH3">Canal de YouTube</h2>
-              Se lanza el canal de YouTube de CAET 21, donde se suben todas las grabaciones impartidas en
-              nuestras distintas áreas, así como las actividades o webinars dados, todo esto con el fin de diversificar la
-              enseñanza y un mejor acceso al contenido.
-            </div>
-        </div>
-    </div>
-  
-      </li>
-  
-  
-      <li>
-        <div class="direction-r animate">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="time-wrapper"><span class="time">13 de Diciembre 2020</span></span>
-          </div>
-          <div class="overlay-box sombreado"
-            style="background-image: url('./assets/images/historia/pagina-web.png');" >
-            <div class="desc2">
-              <h2 class="titleH3">Página web</h2>
-              Se informa de la creación y publicación de la Pagina Web de CAET 21 con el objetivo de poder
-              mostrar información referente a las actividades del grupo. Los participantes del desarrollo de la pagina web
-              son : Duván Sáenz Falcon (Líder), Vicente Mori Rojas, Jean Franco Martínez Roncal , Eduardo Paucarpura
-              Sánchez
-              y Yohan Mamani Cusi.
-            </div>
-          </div>
-      </div>
       </li>
     </ul>
   </div>
-
 </div>
-
-
-
-

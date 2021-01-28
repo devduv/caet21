@@ -22,7 +22,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/configuration.json"
+              "src/configuration.json",
+              "src/configuration/carousel.json",
+              "src/configuration/abstract.json",
+              "src/configuration/history.json",
+              "src/configuration/activities.json"
             ],
             "styles": [
               "node_modules/font-awesome/css/font-awesome.min.css",

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Menu, MenuService } from 'src/app/core/services/menu.service';
 import { map } from 'rxjs/operators';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { InfoContacto } from './../../../_model/infoContacto';
+import { InfoContacto } from '../../../core/models/infoContacto';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ConfigurationService } from 'src/app/core/services/configuration.service';
 import { Observable } from 'rxjs';
@@ -77,8 +77,7 @@ export class ContactFormComponent implements OnInit {
 
   filtrarAreas(val: any) {
     return this.areas.filter(ele =>
-      ele
-      // ele.includes(val)
+      ele.includes(val)
       );
   }
 

@@ -22,16 +22,13 @@ export class PurposeComponent implements OnInit, AfterViewInit {
   private initAbstractList() {
     this.abstractList = [
       {
-        image: './assets/images/abstract/abstract1.png',
-        body: 'Somos una comunidad académica de profesores, estudiantes y personal administrativo' +
-          'dedicado a la investigación científica y tecnológica. Formamos profesionales en Ingeniería de' +
-          'Sistemas e Informática de alto nivel',
+        image: './assets/images/purpose/mision.jpg',
+        body: 'Somos una Comunidad Estudiantil de Tecnología que busca fortalecer el desarrollo académico, social y profesional del estudiante compartiendo   conocimiento , experiencia estudiantil o laboral y ayuda entre la misma comunidad, para ello se realiza distintas actividades extracurriculares , con el apoyo de profesionales, profesores y estudiantes.',
         title: 'Misión'
       },
       {
-        image: './assets/images/abstract/abstract2.png',
-        body: 'Ser comunidad académica de excelencia, culta y pioneraen la investigación científica y tecnológica.' +
-          'Formamos profesionales de Sistemas e Informática',
+        image: './assets/images/purpose/vision.png',
+        body: 'Ser una Comunidad tecnológica reconocida a nivel nacional , por generar proyectos de alto impacto para el desarrollo económico, social y ambiental de la sociedad .Asegurar la participación de los estudiantes de todos los grados en los proyectos relacionados a su especialización.',
         title: 'Visión'
       }
     ];
