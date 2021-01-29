@@ -5,6 +5,7 @@ import { Menu, MenuService } from 'src/app/core/services/menu.service';
 import { map } from 'rxjs/operators';
 import { InfoContacto } from './../../../_model/infoContacto';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ContactoService } from './../../../services/contacto.service';
 // const { GoogleSpreadsheet } = require('google-spreadsheet');
 const keys = require('src/assets/js/keys.json');
 
@@ -24,6 +25,7 @@ export class ContactComponent implements OnInit {
   constructor(
     private menuService: MenuService,
     private snackBar: MatSnackBar,
+    private contactoService: ContactoService,
   ) { }
 
   ngOnInit() {
@@ -73,6 +75,7 @@ export class ContactComponent implements OnInit {
     data.correo = this.form.value['correo'];
     data.numero = this.form.value['numero'];
     data.areaInteres = this.form.value['area'];
+    data.mensaje = this.form.value['mensaje'];
 
     console.log(data);
     this.fillGoogleSheet(data);
@@ -86,8 +89,10 @@ export class ContactComponent implements OnInit {
   }
 
   fillGoogleSheet(data: any){
-    // let doc = new GoogleSpreadsheet('1XilTlajHbBPz91mWOOXGi74XC0xysts4849DCFglOok');
-
+    this.contactoService.sendContactoData(data).subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    )
   }
 
   limpiarControles() {

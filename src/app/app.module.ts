@@ -16,7 +16,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { MenuModule } from './shared/menu/menu.module';
 import { SidenavListModule } from './shared/sidenav-list/sidenav-list.module';
 import { MaterialModule } from './material/material.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(es);
 
@@ -25,7 +25,7 @@ registerLocaleData(es);
     AppComponent
   ],
   imports: [
-  AppRoutingModule,
+AppRoutingModule,
     BrowserModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
@@ -39,7 +39,8 @@ registerLocaleData(es);
     MatButtonModule,
     FlexLayoutModule,
     SidenavListModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es_ES' },
