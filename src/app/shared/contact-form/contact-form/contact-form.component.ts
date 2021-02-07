@@ -8,6 +8,8 @@ import { ConfigurationService } from 'src/app/core/services/configuration.servic
 import { Observable } from 'rxjs';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/actions/dialog/dialog/dialog.component';
+const keys = require('src/assets/js/keys.json');
+
 declare let Email: any;
 
 @Component({
@@ -30,7 +32,8 @@ export class ContactFormComponent implements OnInit {
     private menuService: MenuService,
     private snackBar: MatSnackBar,
     private configurationService: ConfigurationService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private contactoService: ContactoService,
   ) { 
     this.listarAreas();
   }
@@ -95,7 +98,15 @@ export class ContactFormComponent implements OnInit {
     data.numero = this.form.value['phone'];
     data.areaInteres = this.form.value['area'];
     data.mensaje = this.form.value['mensaje'];
+    this.fillGoogleSheet(data);
     this.sendMessage(data.correo, data.areaInteres, data.nombres, data.apellidos);
+  }
+
+  fillGoogleSheet(data: any){
+    this.contactoService.sendContactoData(data).subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    )
   }
 
   private validationFileds() {
