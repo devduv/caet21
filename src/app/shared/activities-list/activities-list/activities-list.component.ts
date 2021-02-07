@@ -1,6 +1,8 @@
-import { Conferencia } from './../../../model/conferencia';
-import { Taller } from './../../../model/taller';
+import { Conference } from '../../../core/models/Conference';
+import { Workshop } from '../../../core/models/Workshop';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivitiesService } from 'src/app/core/services/activities.service';
+import { Activity } from 'src/app/core/models/Activity';
 declare var showStatic: any;
 
 @Component({
@@ -11,8 +13,10 @@ declare var showStatic: any;
 export class ActivitiesListComponent implements OnInit, AfterViewInit {
 
   breakpoint: any;
-  talleres: Taller[];
-  conferencias: Conferencia[];
+
+  activities: any;
+  workshops: Workshop[];
+  conferences: Conference[];
 
   ngOnInit() {
     this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
@@ -26,28 +30,23 @@ export class ActivitiesListComponent implements OnInit, AfterViewInit {
     showStatic();
   }
 
-  constructor() {
-    this.initTalleres();
-    this.initConferencias();
+  constructor(
+    private activitiesService: ActivitiesService
+  ) {
+    this.getActivities();
   }
 
-  private initTalleres() {
-    this.talleres = [
-      { nombre: "Modelamiento de Procesos", source: "../assets/images/talleres/procesos.png", fecha: "15/01/2021", hora: "23:00", iconoHora: "../assets/images/talleres/hora.png", iconoFecha: "../assets/images/talleres/fecha.png" },
-        { nombre: "Programación Web", source: "../assets/images/talleres/web.png" , fecha: "15/01/2021", hora: "23:00", iconoHora: "../assets/images/talleres/hora.png", iconoFecha: "../assets/images/talleres/fecha.png"},
-      { nombre: "Base de Datos", source: "../assets/images/talleres/baseDatos.png" , fecha: "15/01/2021", hora: "23:00", iconoHora: "../assets/images/talleres/hora.png", iconoFecha: "../assets/images/talleres/fecha.png"},
-      /* { nombre: "Inteligencia Artificial", source: "../assets/images/talleres/inteligenciaArtificial.png" , fecha: "15/01/2021", hora: "23:00", iconoHora: "../assets/images/talleres/hora.png", iconoFecha: "../assets/images/talleres/fecha.png"}, */
-        /*{ nombre: "Blockchain", source: "../assets/images/talleres/blockchain.png" , fecha: "15/01/2021", hora: "23:00", iconoHora: "../assets/images/talleres/hora.png", iconoFecha: "../assets/images/talleres/fecha.png"},
-       { nombre: "Seguridad de la Información", source: "../assets/images/talleres/seguridadInformacion.png" , fecha: "15/01/2021", hora: "23:00", iconoHora: "../assets/images/talleres/hora.png", iconoFecha: "../assets/images/talleres/fecha.png"} */
-    ];
+  async getActivities() {
+    this.activities = await this.activitiesService.getActivities();
+    this.setWorkshops();
+    this.setConferences();
   }
 
-  private initConferencias() {
-    this.conferencias = [
-      {
-        nombre: "Robotica en el mercado laboral de los Próximos años", source: "../assets/images/abstract/abstract2.png", fecha: "15/01/2021", hora: "23:00", iconoHora: "../assets/images/talleres/hora.png", iconoFecha: "../assets/images/talleres/fecha.png", exponente: "Erik Antony Muñico Galvan",
-        cargoExponente: "Jefe del Área de Robótica en UNMSM"
-      }
-    ];
+  private setWorkshops() {
+    this.workshops = this.activities?.workshops;
+  }
+
+  private setConferences() {
+    this.conferences = this.activities?.conferences;
   }
 }

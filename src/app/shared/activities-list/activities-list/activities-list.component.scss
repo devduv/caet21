@@ -1,7 +1,4 @@
-.card {
-/*     max-width: 500px;
-    max-height: 300px; */
-}
+@import "src/styles/styles.color.scss";
 
 .img-card {
     height: 235px;
@@ -16,21 +13,23 @@
 }
 
 .taller-card-div {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
+    color: white;
 }
 
 .taller-card-div-2 {
     position: absolute;
-    /* float: right; */
+    color: white !important;
     right: 0;
     top: 0;
     background: #0d9479cf;
     padding: 25px;
-    border-bottom-left-radius: 15px;;
+    border-bottom-left-radius: 15px;
+    ;
 }
 
 mat-grid-tile {
@@ -58,13 +57,24 @@ mat-grid-tile {
 
 .abstract__body {
     margin: 25px;
+    color: white;
 }
 
-.card-responsive {
-    width: 50%;
-    margin: 25px;
+.mat-tab-group {
+    margin-bottom: 48px;
 }
 
-.activity_list {
-    display: inline-flex;
+
+:host::ng-deep .mat-tab-header {
+    margin-bottom: 15px !important;
 }
+
+:host::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: $color_primary-01;
+}
+:host::ng-deep .img-card {
+    height: 300px !important;
+}
+a {
+    text-decoration: none;
+  }

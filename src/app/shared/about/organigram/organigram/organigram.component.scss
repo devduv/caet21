@@ -31,14 +31,6 @@
     padding-left: 25px;
 }
 
-.grid-box {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 30% 30% 30%;
-    grid-column-gap: 30px;
-    grid-row-gap: 10px;
-}
-
 .card {
     padding: 25px;
     background: white;
@@ -75,27 +67,12 @@
 }
 
 @media screen and (max-width: 1200px) {
-    /*
-    .caja-organigrama{
-        width: 100%;
-        min-width: 1150px;
-    }
-    */
-    .grid-box {
-        grid-template-columns: 45% 45%;
-    }
-
     .caracteristica {
         overflow: auto;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .grid-box {
-        grid-template-columns: 80%;
-        grid-column-gap: 0px;
-    }
-
     .caracteristica {
         overflow: auto;
     }

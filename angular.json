@@ -21,7 +21,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/configuration.json",
+              "src/configuration/carousel.json",
+              "src/configuration/abstract.json",
+              "src/configuration/history.json",
+              "src/configuration/activities.json"
             ],
             "styles": [
               "node_modules/font-awesome/css/font-awesome.min.css",
@@ -31,7 +36,8 @@
             ],
             "scripts": [
               "src/assets/js/animation.js",
-              "src/assets/js/googleSheet.js"
+              "src/assets/js/googleSheet.js",
+              "src/assets/js/smtp.js"
             ]
           },
           "configurations": {
@@ -132,5 +138,8 @@
     "@schematics/angular:component": {
       "style": "scss"
     }
+  },
+  "cli": {
+    "analytics": "eec7c2d1-8655-4b49-974e-7b5e503ae208"
   }
 }

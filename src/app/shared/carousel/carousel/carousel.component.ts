@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CarouselService } from 'src/app/core/services/carousel.service';
 
 @Component({
   selector: 'app-carousel',
@@ -6,23 +7,19 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  
+
   public images: any[];
-  constructor() {
-    this.initImages();
+  constructor(
+    private carouselService: CarouselService
+  ) {
   }
 
   ngOnInit() {
+    this.getCarousel();
   }
 
-  private initImages() {
-    this.images = [
-      { path: './assets/images/portada.png' },
-      { path: './assets/images/fisi.jpg' },
-      { path: './assets/images/xd.png' },
-      { path: './assets/images/bigdata.jpg' },
-      
-    ];
+  async getCarousel() {
+    this.images = await this.carouselService.getCarousel();
   }
 
   public handleCarouselEvents($event) {

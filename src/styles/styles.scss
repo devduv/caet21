@@ -2,7 +2,6 @@
 @import "src/styles/styles.color.scss";
 @import "~igniteui-angular/lib/core/styles/themes/index";
 @import "./node_modules/ngx-org-chart/theming";
-
 @include igx-core();
 @include igx-theme($default-palette, $legacy-support: true);
 * {
@@ -100,10 +99,50 @@
     color: black;
 }
 
+.mat-tab-label .mat-tab-label-content {
+    font-size: large;
+}
 
 input:focus,
 select:focus {
-  outline: none;
+    outline: none;
+}
+
+.mat-snack-bar {
+    background: #19bc9c;
+    color: white !important;
+}
+
+.mat-snack-bar-error {
+    background: #eb0046;
+    color: white !important;
+}
+
+.mat-card-content {
+    color: white !important;
+}
+
+
+.grid-box {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .grid-box {
+        grid-template-columns: 45% 45%;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .grid-box {
+        grid-template-columns: 80%;
+        grid-column-gap: 0px;
+    }
 }
 
 

@@ -4,6 +4,7 @@ import { ActivitiesListComponent } from './activities-list/activities-list.compo
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [ActivitiesListComponent],
@@ -11,7 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     MatGridListModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule
   ],
   exports: [ActivitiesListComponent]
 })

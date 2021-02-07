@@ -1,0 +1,32 @@
+[
+    {
+        "date": "30 de Octubre 2020",
+        "title": "Iniciativa",
+        "content": "Nace la idea e iniciativa para crear una Comunidad llamada inicialmente “Proyecto de Especialización según área de Interés “ que busca integrar a todos los alumnos de la FISI – UNMSM de distintos grados en una misma comunidad y poder compartir sus conocimientos según el área que se especialicen.",
+        "image": "./assets/images/historia/iniciativa.jpg"
+    }, 
+    {
+        "date": "05 de Diciembre 2020",
+        "title": "Nombre",
+        "content": "Se da la Primera Reunión Oficial del Grupo donde se oficializa el nombre “Club académico Estudiantil de Tecnología” – CAET21 . Además, se da la presentación de cada responsable y/o personal de apoyo de cada área de Interés.",
+        "image": "./assets/images/historia/nombre.jpg"
+    },
+    {
+        "date": "13 de Diciembre 2020",
+        "title": "Difusión",
+        "content": "Se difunde de manera oficial, en grupos de mayor cantidad de miembros fisianos de Facebook, el proyecto CAET 21, para invitarlos a pertenecer y que puedan compartir con nosotros, esta gran experiencia de ser una comunidad netamente de alumnos de la facultad FISI . Días después, cada responsable hizo su presentación e invitación para que puedan pertenecer a su área de interés.",
+        "image": "./assets/images/historia/difusión.jpg"
+    },
+    {
+        "date": "06 de Enero 2021",
+        "title": "Canal de YouTube",
+        "content": "Se lanza el canal de YouTube de CAET 21, donde se suben todas las grabaciones impartidas en nuestras distintas áreas, así como las actividades o webinars dados, todo esto con el fin de diversificar la enseñanza y un mejor acceso al contenido.",
+        "image": "./assets/images/historia/yt.jpg"
+    },
+    {
+        "date": "22 de Enero 2021",
+        "title": "Página web",
+        "content": "Se informa de la creación y publicación de la Pagina Web de CAET 21 con el objetivo de poder mostrar información referente a las actividades del grupo. Los participantes del desarrollo de la pagina web son : Duván Sáenz Falcon (Líder), Vicente Mori Rojas, Jean Franco Martínez Roncal , Eduardo Paucarpura Sánchez y Yohan Mamani Cusi.",
+        "image": "./assets/images/historia/pagina-web.png"
+    }
+]

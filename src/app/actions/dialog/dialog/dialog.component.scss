@@ -1,0 +1,40 @@
+@import "src/styles/styles.color.scss";
+
+.dialog__title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dialog__body {
+    text-align: center;
+}
+
+.dialog__icon {
+    text-align: center;
+}
+
+.dialog__button {
+    color: white;
+  background: $color_primary-03 !important;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dialog__button:hover {
+    background: $color_primary-01 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+:host ::ng-deep .mat-icon {
+    color: $color_primary-02 !important;
+    font-size: 35px !important;
+}
+
+::ng-deep .mat-dialog-container {
+    max-width: 400px !important;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigurationService } from 'src/app/core/services/configuration.service';
 declare var showStatic: any;
 
 @Component({
@@ -8,9 +9,13 @@ declare var showStatic: any;
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  configuration: any;
+  constructor(
+    private configurationService: ConfigurationService
+  ) { }
 
   ngOnInit() {
+    this.getConfiguration();
   }
 
   ngAfterViewInit() {
@@ -18,4 +23,7 @@ export class FooterComponent implements OnInit {
   }
 
 
+  async getConfiguration() {
+    this.configuration = await this.configurationService.getConfiguration();
+  }
 }
