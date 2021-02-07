@@ -36,6 +36,7 @@
             ],
             "scripts": [
               "src/assets/js/animation.js",
+              "src/assets/js/googleSheet.js",
               "src/assets/js/smtp.js"
             ]
           },

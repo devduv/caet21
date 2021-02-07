@@ -26,7 +26,7 @@ registerLocaleData(es);
     AppComponent
   ],
   imports: [
-  AppRoutingModule,
+AppRoutingModule,
     BrowserModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
