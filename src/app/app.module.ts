@@ -12,12 +12,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { FooterModule } from './shared/footer/footer.module';
 import { MenuModule } from './shared/menu/menu.module';
 import { SidenavListModule } from './shared/sidenav-list/sidenav-list.module';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AsyncPipe } from '../../node_modules/@angular/common';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 registerLocaleData(es);
 
@@ -32,7 +33,6 @@ AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule,
     MenuModule,
-    FooterModule,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
@@ -41,7 +41,8 @@ AppRoutingModule,
     FlexLayoutModule,
     SidenavListModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     AsyncPipe,

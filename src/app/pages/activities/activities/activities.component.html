@@ -1,1 +1,7 @@
-<app-activities-list></app-activities-list>
+<app-activities-list *ngIf="activities"
+[activities]="activities"
+></app-activities-list>
+
+<div *ngIf="activities">
+    <app-footer></app-footer>
+</div>

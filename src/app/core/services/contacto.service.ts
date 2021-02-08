@@ -1,18 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ConfigurationService } from './configuration.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactoService {
 
-  URL_API = 'https://caet21-backend-test.herokuapp.com/contacto'
-
   constructor(
-    private http: HttpClient,
+    private http: HttpClient
   ) { }
 
-  sendContactoData(data: any) {
-    return this.http.post(this.URL_API, data);
+  public sendContactoData(url, data: any) {
+    return this.http.post(url, data).toPromise();
   }
 }

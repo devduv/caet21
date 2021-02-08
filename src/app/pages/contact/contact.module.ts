@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactFormModule } from 'src/app/shared/contact-form/contact-form.module';
+import { FooterModule } from 'src/app/shared/footer/footer.module';
 
 @NgModule({
   declarations: [ContactComponent],
@@ -10,6 +11,7 @@ import { ContactFormModule } from 'src/app/shared/contact-form/contact-form.modu
   CommonModule,
     ContactRoutingModule,
     ContactFormModule,
+    FooterModule
   ]
 })
 export class ContactModule { }

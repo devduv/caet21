@@ -4,6 +4,7 @@ import { PurposeComponent } from './purpose/purpose.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FooterModule } from '../../footer/footer.module';
 
 
 
@@ -13,7 +14,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     CommonModule,
     MaterialModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    FooterModule
   ]
 })
 export class PurposeModule {

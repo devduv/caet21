@@ -10,5 +10,6 @@
         "phone": "948504958",
         "address_1": "San Miguel puerta 7",
         "address_2": "San Miguel, Lima"
-    }
+    },
+    "API_URL": "https://caet21-backend-test.herokuapp.com/contacto"
 }
