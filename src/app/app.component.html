@@ -1,8 +1,8 @@
-<mat-sidenav-container color="white">
-    <mat-sidenav #sidenav role="navigation">
+<mat-sidenav-container color="white" class="simi-sidenav-container">
+    <mat-sidenav #sidenav role="navigation" class="simi-sidenav">
         <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
     </mat-sidenav>
-    <mat-sidenav-content style="margin-top: 57px !important;">
+    <mat-sidenav-content style="margin-top: 56px !important;">
         <app-menu (sidenavToggle)="sidenav.toggle()"></app-menu>
         <main>
             <div>
