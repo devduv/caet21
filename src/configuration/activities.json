@@ -4,7 +4,7 @@
             "title": "Prototipado  Web",
             "date": "29/01/2021",
             "hour": "19:00",
-            "image": "./assets/images/activities/workshops/ws1.png",
+            "image": "./assets/images/activities/workshops/ws3.png",
             "link": ""
         },
         {
@@ -28,7 +28,6 @@
             "date": "09/01/2021",
             "hour": "18:00",
             "image": "./assets/images/activities/conferences/c1.png",
-            "link": "https://drive.google.com/drive/u/0/folders/1-J2_0AR3qjJE5p4_PffFpX_RsD9rhaAZ",
             "speaker": "Ing. Fanny Sabrera",
             "position": "Docente FISI - UNMSM"
         }
