@@ -4,20 +4,15 @@ import es from '@angular/common/locales/es';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { registerLocaleData } from '@angular/common';
-import { NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { FooterModule } from './shared/footer/footer.module';
 import { MenuModule } from './shared/menu/menu.module';
 import { SidenavListModule } from './shared/sidenav-list/sidenav-list.module';
-import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AsyncPipe } from '../../node_modules/@angular/common';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 registerLocaleData(es);
 
@@ -26,22 +21,16 @@ registerLocaleData(es);
     AppComponent
   ],
   imports: [
-AppRoutingModule,
+    AppRoutingModule,
     BrowserModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
     RouterModule,
     MenuModule,
-    FooterModule,
-    MatToolbarModule,
     MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    MatButtonModule,
-    FlexLayoutModule,
     SidenavListModule,
-    MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     AsyncPipe,

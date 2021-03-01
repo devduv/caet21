@@ -1,8 +1,6 @@
 import { Conference } from '../../../core/models/Conference';
 import { Workshop } from '../../../core/models/Workshop';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivitiesService } from 'src/app/core/services/activities.service';
-import { Activity } from 'src/app/core/models/Activity';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 declare var showStatic: any;
 
 @Component({
@@ -12,18 +10,14 @@ declare var showStatic: any;
 })
 export class ActivitiesListComponent implements OnInit, AfterViewInit {
 
-  breakpoint: any;
-
+  @Input()
   activities: any;
+
   workshops: Workshop[];
   conferences: Conference[];
 
   ngOnInit() {
-    this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
-  }
-
-  onResize(event) {
-    this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 3;
+    this.getActivities();
   }
 
   ngAfterViewInit() {
@@ -31,13 +25,11 @@ export class ActivitiesListComponent implements OnInit, AfterViewInit {
   }
 
   constructor(
-    private activitiesService: ActivitiesService
   ) {
-    this.getActivities();
+   
   }
 
-  async getActivities() {
-    this.activities = await this.activitiesService.getActivities();
+  public getActivities() {
     this.setWorkshops();
     this.setConferences();
   }

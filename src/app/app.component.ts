@@ -8,13 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
-  public isLoading: boolean;
   constructor(private router: Router) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.isLoading = true;
-    }, 1500);
   }
 
   changeMenu(menu) {

@@ -8,7 +8,7 @@ import { ConfigurationService } from 'src/app/core/services/configuration.servic
 import { Observable } from 'rxjs';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/actions/dialog/dialog/dialog.component';
-const keys = require('src/assets/js/keys.json');
+import { ContactoService } from 'src/app/core/services/contacto.service';
 
 declare let Email: any;
 
@@ -74,7 +74,6 @@ export class ContactFormComponent implements OnInit {
   }
 
   seleccionarArea(p: any) {
-    console.log(p);
     this.areaSeleccionada = p.option.value;
   }
 
@@ -103,10 +102,7 @@ export class ContactFormComponent implements OnInit {
   }
 
   fillGoogleSheet(data: any){
-    this.contactoService.sendContactoData(data).subscribe(
-      res => console.log(res),
-      err => console.log(err)
-    )
+    this.contactoService.sendContactoData( this.configuration.API_URL, data);
   }
 
   private validationFileds() {

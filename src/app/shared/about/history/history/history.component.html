@@ -11,7 +11,7 @@
   </header>
   <div class="container-timeline">
     <ul class="timeline">
-      <li *ngFor="let item of historyList; let i = index">
+      <li *ngFor="let item of historyList; let i = index" class="animate__static">
         <div [ngClass]="i % 2 === 0 ? 'direction-r' : 'direction-l'">
           <div class="flag-wrapper">
             <span class="hexa"></span>
@@ -29,4 +29,8 @@
       </li>
     </ul>
   </div>
+</div>
+
+<div *ngIf="historyList">
+  <app-footer></app-footer>
 </div>

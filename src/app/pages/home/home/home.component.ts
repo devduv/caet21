@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.menuService.changeMenu(Menu.home);
+    
   }
   ngAfterViewInit() {
     showStatic();

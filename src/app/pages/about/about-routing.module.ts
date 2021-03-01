@@ -4,6 +4,7 @@ import { HistoryComponent } from 'src/app/shared/about/history/history/history.c
 import { AboutComponent } from './about/about.component';
 import { PurposeComponent } from './../../shared/about/purpose/purpose/purpose.component';
 import { OrganigramComponent } from 'src/app/shared/about/organigram/organigram/organigram.component';
+import { FooterComponent } from 'src/app/shared/footer/footer/footer.component';
 
 const routes: Routes = [
   {

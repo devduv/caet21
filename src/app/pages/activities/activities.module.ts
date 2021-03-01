@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivitiesRoutingModule } from './activities-routing.module';
 import { ActivitiesComponent } from './activities/activities.component';
 import { ActivitiesListModule } from 'src/app/shared/activities-list/activities-list.module';
+import { FooterModule } from 'src/app/shared/footer/footer.module';
 
 
 
@@ -11,7 +12,8 @@ import { ActivitiesListModule } from 'src/app/shared/activities-list/activities-
   imports: [
     CommonModule,
     ActivitiesRoutingModule,
-    ActivitiesListModule
+    ActivitiesListModule,
+    FooterModule
   ]
 })
 export class ActivitiesModule { }
