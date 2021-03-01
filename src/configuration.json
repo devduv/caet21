@@ -7,8 +7,8 @@
     },
     "information": {
         "email": "grupo.caet@gmail.com",
-        "phone": "948504958",
-        "address_1": "San Miguel puerta 7",
+        "phone": "993656426",
+        "address_1": "Ciudad Universitario UNMSM Puerta 7",
         "address_2": "San Miguel, Lima"
     },
     "API_URL": "https://caet21-backend-test.herokuapp.com/contacto"

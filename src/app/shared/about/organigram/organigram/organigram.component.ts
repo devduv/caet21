@@ -14,7 +14,7 @@ export class OrganigramComponent implements OnInit, AfterViewInit {
     functions: [
       'Dirigir al equipo para cumplir los objetivos trazados.',
       'Supervisar las actividades de cada área de interés y de las áreas funcionales.',
-      'Convocar a reuniones internas con el comité de gestión y con cada área funcional.',
+      'Convocar a reuniones internas con las Áreas de interés y con cada área funcional.',
       ' Coordinar las ponencias, talleres o conferencias.',
       'Apoyar en todo lo necesario a los responsables y personal de apoyo de cada área de interés.'
     ]

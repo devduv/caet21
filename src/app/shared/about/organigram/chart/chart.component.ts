@@ -15,27 +15,32 @@ export class ChartComponent implements OnInit {
       childs: [
         {
           cssClass: 'ngx-org-child',
-          title: 'Comité de Gestión',
+          title: 'Áreas de interés',
           childs: [
             {
               name: 'Cesar Raúl Cacho León',
               cssClass: 'ngx-org-child',
-              title: 'Redes Sociales'              
+              title: 'Área F. Redes Sociales'              
             },
             {
               name: 'Duván Sáenz Falcon',
               cssClass: 'ngx-org-child',
-              title: 'Página Web'              
+              title: 'Área F. Pagina Web'              
             },
             {
               name: 'Juan Carlos Flores Pucho',
               cssClass: 'ngx-org-child',
-              title: 'Edición'              
+              title: 'Área F. de Edición'              
             },
             {
               name: 'Jose Antonio Aira Retuerto',
               cssClass: 'ngx-org-child',
-              title: 'Análisis de Datos'              
+              title: 'Área F. Análisis de Datos'              
+            },
+            {
+              name: 'Nathaly Anett Alvarez Sivirichi',
+              cssClass: 'ngx-org-child',
+              title: 'Área F. de Actividades'              
             }
           ]
         }

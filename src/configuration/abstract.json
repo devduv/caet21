@@ -1,8 +1,8 @@
 [
     {
         "src": "./assets/images/abstract/abstract1.jpg",
-        "title": "Enseñanza de calidad",
-        "body": "Como grupo estudiantil tenemos el fin de buscar resultados de aprendizaje ambiciosos de parte de los integrantes en cada taller impartido.",
+        "title": "Compromiso Estudiantil",
+        "body": "CAET 21 busca la integracion de toda la comunidad estudiantil fisiana con una meta en común: crecer academica y profesionalmente.",
         "class": "animate__static"
     },
     {
@@ -14,7 +14,7 @@
     {
         "src": "./assets/images/abstract/abstract3.png",
         "title": "Talleres y Conferencias",
-        "body": "Realizamos talleres semanales de acuerdo al Área de Interés por parte de los responsables del área, y conferencias que dictan nuestros docentes",
+        "body": "Realizamos talleres semanales de acuerdo al Área de Interés por parte de los responsables del área, y conferencias dadas por estudiantes, docentes y egresados.",
         "class": ""
     }
 ]
